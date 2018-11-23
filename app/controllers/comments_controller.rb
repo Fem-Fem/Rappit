@@ -15,6 +15,7 @@ class CommentsController < ActionController::Base
 
   def show
     @comment = Comment.find(params[:id])
+    render json: @comment
   end
 
   def edit
