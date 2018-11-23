@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.string "category"
     t.integer "user_id"
     t.integer "post_id"
     t.integer "upvotes"
