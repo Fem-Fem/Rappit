@@ -35,6 +35,9 @@ class CommentsController < ActionController::Base
       @comments = Comment.all
   end
 
+  def delete
+  end
+
   private
 
   def comment_params

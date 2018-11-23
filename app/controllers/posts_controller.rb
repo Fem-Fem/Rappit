@@ -35,6 +35,9 @@ class PostsController < ActionController::Base
       @posts = Post.all
   end
 
+  def delete
+  end
+
   private
 
   def post_params
