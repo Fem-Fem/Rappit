@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "category"
     t.integer "upvotes"
     t.integer "downvotes"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
