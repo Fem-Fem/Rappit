@@ -1,25 +1,30 @@
 class PostsController < ActionController::Base
   def new
-    @user = User.new
+    @post = Post.new
   end
 
   def create
-    @user = User.new(user_params)
-  	user_path(@user)
+    @post = Post.new(post_params)
+    if @post.save
+    	post_path(@post)
+    else
+      @errors = @post.errors
+      erb :'/new'
+    end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = Post.find(params[:id])
   end
 
   def index
-      @users = User.all
+      @posts = Post.all
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:username, :password)
+  def post_params
+    params.require(:user).permit(:title, :content)
   end
 
 end
