@@ -13,9 +13,8 @@ class PostsController < ActionController::Base
   end
 
   def show
-    binding.pry
     @post = Post.find(params[:id])
-    render json :@post
+    render json: @post
   end
 
   def edit
