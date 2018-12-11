@@ -4,8 +4,6 @@ class CreatePosts < ActiveRecord::Migration[4.2]
 			t.string :title
 			t.string :content
 			t.string :category
-			t.integer :upvotes
-			t.integer :downvotes
 			t.integer :user_id
 		end
 	end

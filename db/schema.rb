@@ -16,16 +16,12 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "content"
     t.integer "user_id"
     t.integer "post_id"
-    t.integer "upvotes"
-    t.integer "downvotes"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.string "category"
-    t.integer "upvotes"
-    t.integer "downvotes"
     t.integer "user_id"
   end
 

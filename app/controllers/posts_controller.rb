@@ -8,11 +8,12 @@ class PostsController < ActionController::Base
     if @post.save
     	render json :@post
     else
-      render json {:message @post.errors}, status: 301
+      # render json {message: @post.errors}, status: 301
     end
   end
 
   def show
+    binding.pry
     @post = Post.find(params[:id])
     render json :@post
   end
@@ -26,7 +27,7 @@ class PostsController < ActionController::Base
     if @post.update!(post_params)
       render json: @post
     else
-      render json {:message @post.errors}, status: 400
+      # render json {message: @post.errors}, status: 400
     end
   end
 
@@ -40,9 +41,8 @@ class PostsController < ActionController::Base
     if @post.destroy
       render status: 204
     else
-      render json: {message: "Unable to remove this post"}, status: 400
-  else
-
+      # render json: {message: "Unable to remove this post"}, status: 400
+    end
   end
 
   private

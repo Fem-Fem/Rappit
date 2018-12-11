@@ -4,8 +4,6 @@ class CreateComments < ActiveRecord::Migration[4.2]
 			t.string :content
 			t.integer :user_id
 			t.integer :post_id
-			t.integer :upvotes
-			t.integer :downvotes
 		end
 	end
 end
