@@ -6,15 +6,15 @@ class PostsController < ActionController::Base
   def create
     @post = Post.new(post_params)
     if @post.save
-    	redirect_to post_path(@post)
+    	render json :@post
     else
-      @errors = @post.errors
-      erb :'/new'
+      render json {:message @post.errors}, status: 301
     end
   end
 
   def show
     @post = Post.find(params[:id])
+    render json :@post
   end
 
   def edit
@@ -24,18 +24,25 @@ class PostsController < ActionController::Base
   def update
     @post = Post.find(params[:id])
     if @post.update!(post_params)
-      #redirect to comment
+      render json: @post
     else
-      @errors = @post.errors
-      erb :'/edit'
+      render json {:message @post.errors}, status: 400
     end
   end
 
   def index
       @posts = Post.all
+      render json: @posts
   end
 
-  def delete
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      render status: 204
+    else
+      render json: {message: "Unable to remove this post"}, status: 400
+  else
+
   end
 
   private
