@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     	resources :comments, only: [:index, :show, :create, :edit, :update, :delete, :new]
 	end
 	# login?
+	
 end
