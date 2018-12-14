@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 
-class createPost extends Component {
+
+class CreatePost extends Component {
 
 	constructor() {
 		super();
@@ -10,9 +12,14 @@ class createPost extends Component {
 		};
 	}
 
-	handleChange(event) {
+	handleTitleChange(event) {
 		this.setState({
 			title: event.target.value
+		})
+	}
+
+	handleContentChange(event) {
+		this.setState({
 			content: event.target.value,
 		})
 	}
@@ -23,9 +30,9 @@ class createPost extends Component {
 				<form>
 					<p>
 						<label>Title</label>
-						<input type="text" />
+						<input type="text" onChange={(event) => this.handleTitleChange(event)}/>
 						<label>Content</label>
-						<input type="text" />
+						<input type="text" onChange={(event) => this.handleContentChange(event)}/>
 					</p>
 					<input type="submit" />
 				</form>
@@ -34,4 +41,4 @@ class createPost extends Component {
 	)
 }
 
-export default Post;
+export default connect(null, mapDispatchtoProps)(CreatePost)

@@ -1,6 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
 
-class createComment extends Component {
+class CreateComment extends Component {
 
 	constructor() {
 		super();
@@ -31,4 +32,4 @@ class createComment extends Component {
 	)
 }
 
-export default Comment;
+export default connect(null, mapDispatchtoProps)(CreatePost)
