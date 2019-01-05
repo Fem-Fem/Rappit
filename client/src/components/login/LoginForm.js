@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap"
 
-export default class LoginForm extends React.component {
+export default class LoginForm extends Component {
 
 	constructor(props) {
 		super(props);
-	}
 
 	this.state = {
 		username: "",
@@ -49,5 +48,6 @@ render() {
 			</FormGroup>
 			<Button type="submit">Login</Button>
 		</form>
-	)
+		)
+	}
 }
