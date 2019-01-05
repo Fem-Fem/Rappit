@@ -3,16 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import manage from './reducers/manage'
 import { Provider } from 'react-redux';
 import {createStore} from 'redux';
 
-let store = createStore(manage)
-
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>, 
+	<App />, 
 	document.getElementById('root')
 );
 

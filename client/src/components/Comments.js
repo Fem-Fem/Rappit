@@ -6,7 +6,6 @@ const Comments = () => {
 			<p>
 				Comments
 			</p>
-			<Route path='/:id' component={Comment} />
 		</div>
 	)
 }

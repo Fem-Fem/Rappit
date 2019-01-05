@@ -7,7 +7,6 @@ const Posts = () => {
 			<p>
 				Posts
 			</p>
-			<Route path='/:id' component={Post} />
 		</div>
 	)
 }
