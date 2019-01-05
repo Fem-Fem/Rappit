@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class CommentsContainer extends Component {
+class PostsContainer extends Component {
 
 	render() {
 		return(
@@ -11,7 +11,7 @@ class CommentsContainer extends Component {
 };
 
 const mapStateToProps = (state) => {
-	return { comments: state.comments}
+	return { comments: state.posts}
 }
 
-export default connect()(CommentsContainer);
+export default connect()(PostsContainer);
