@@ -1,25 +1,15 @@
-import React, {Component} from 'react';
-import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap"
+import React, {Component} from "react";
+import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
 
 export default class LoginForm extends Component {
 
-	constructor(props) {
-		super(props);
-
-	this.state = {
+	state = {
 		username: "",
 		password: "",
 	};
-}
-
-validateForm() {
-	return this.state.username.length > 0 && this.sate.password.length > 0;
-}
 
 handleChange = event => {
-	this.setState({
-		[event.target.id]: event.target.value
-	});
+	this.setState({value: event.target.value});
 }
 
 handleSubmit = event => {

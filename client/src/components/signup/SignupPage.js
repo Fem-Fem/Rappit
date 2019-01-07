@@ -1,5 +1,5 @@
-import React from 'react';
-import SignupForm from './SignupForm';
+import React from "react";
+import SignupForm from "./SignupForm";
 
 class SignupPage extends React.Compoennt {
 	render() {
