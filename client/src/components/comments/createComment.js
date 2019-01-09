@@ -17,19 +17,24 @@ class CreateComment extends Component {
 	}
 
 
-	render(
-		return(
-			<div>
-				<form>
-					<p>
-						<label>Content</label>
-						<input type="text" onChange={(event) => this.handleChange(event)}/>
-					</p>
-					<input type="submit" />
-				</form>
-			<div>
-		)
-	)
-}
+	render() {
+		return (
+			<form onSubmit = {this.handleSubmit}>
+				<FormGroup>
+					<ControlLabel>Comment</ControlLabel>
+					<FormControl
+					name="content"
+					type="text"
+					value={this.state.value}
+					placeholder="Enter content"
+					onChange={this.handleChange}
+					/>
+				</FormGroup>
+
+				<Button type="submit">Upload Comment</Button>
+			</form>
+			)
+		}
+	}
 
 export default connect(null, mapDispatchtoProps)(CreateComment)

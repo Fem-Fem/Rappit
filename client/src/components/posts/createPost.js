@@ -24,21 +24,33 @@ class CreatePost extends Component {
 		})
 	}
 
-	render(
-		return(
-			<div>
-				<form>
-					<p>
-						<label>Title</label>
-						<input type="text" onChange={(event) => this.handleTitleChange(event)}/>
-						<label>Content</label>
-						<input type="text" onChange={(event) => this.handleContentChange(event)}/>
-					</p>
-					<input type="submit" />
-				</form>
-			<div>
+render(
+	return (
+		<form onSubmit = {this.handleSubmit}>
+			<FormGroup>
+				<ControlLabel>Username</ControlLabel>
+				<FormControl
+				name="title"
+				type="text"
+				value={this.state.value}
+				placeholder="Enter title"
+				onChange={this.handleChange}
+				/>
+			</FormGroup>
+
+			<FormGroup
+				<ControlLabel>Content</ControlLabel>
+				<FormControl
+				name="content"
+				type="text"
+				value={this.state.value}
+				placeholder="Enter content"
+				onChange={this.handleChange}
+				/>
+			</FormGroup>
+			<Button type="submit">Upload Post</Button>
+		</form>
 		)
-	)
-}
+)
 
 export default connect(null, mapDispatchtoProps)(CreatePost)
