@@ -3,10 +3,19 @@ import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
 
 export default class LoginForm extends Component {
 
-	state = {
+	constructor(props) {
+		super(props);
+
+		this.handleChange = this.handleChange.bind(this)
+		this.handleSubmit = this.handleSubmit.bind(this)
+
+		this.state = {
 		username: "",
 		password: "",
 	};
+
+}
+
 
 handleChange = event => {
 	this.setState({value: event.target.value});
