@@ -18,7 +18,8 @@ export default class LoginForm extends Component {
 
 
 handleChange = event => {
-	this.setState({value: event.target.value});
+	const name = event.target.name;
+	this.setState({name: event.target.value});
 }
 
 handleSubmit = event => {
@@ -31,15 +32,19 @@ render() {
 			<FormGroup>
 				<ControlLabel>Username</ControlLabel>
 				<FormControl
+				name="username"
 				type="text"
 				value={this.state.value}
 				placeholder="Enter username"
 				onChange={this.handleChange}
 				/>
 			</FormGroup>
+
 			<FormGroup controlID="password">
 				<ControlLabel>Password</ControlLabel>
 				<FormControl
+				name="password"
+				type="password"
 				value={this.state.value}
 				placeholder="Enter password"
 				onChange={this.handleChange}
