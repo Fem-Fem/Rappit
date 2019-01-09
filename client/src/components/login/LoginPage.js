@@ -5,6 +5,7 @@ class LoginPage extends React.Component {
 	render() {
 		return (
 			<div>
+				<hi />
 				<LoginForm />
 			</div>
 		)
