@@ -34,7 +34,7 @@ render(
 				type="text"
 				value={this.state.value}
 				placeholder="Enter title"
-				onChange={this.handleChange}
+				onChange={this.handleTitleChange}
 				/>
 			</FormGroup>
 
@@ -45,7 +45,7 @@ render(
 				type="text"
 				value={this.state.value}
 				placeholder="Enter content"
-				onChange={this.handleChange}
+				onChange={this.handleContentChange}
 				/>
 			</FormGroup>
 			<Button type="submit">Upload Post</Button>

@@ -6,7 +6,9 @@ export default class LoginForm extends Component {
 	constructor(props) {
 		super(props);
 
-		this.handleChange = this.handleChange.bind(this)
+		this.handleUsernameChange = this.handleUsernameChange.bind(this)
+		this.handlePasswordChange = this.handlePasswordChange.bind(this)
+
 		this.handleSubmit = this.handleSubmit.bind(this)
 
 		this.state = {
@@ -17,13 +19,21 @@ export default class LoginForm extends Component {
 }
 
 
-handleChange = event => {
-	const name = event.target.name;
-	this.setState({name: event.target.value});
+handleUsernameChange = event => {
+	this.setState({
+		username: event.target.value
+	})
+}
+
+handlePasswordChange = event => {
+	this.setState({
+		password: event.target.value,
+	})
 }
 
 handleSubmit = event => {
 	event.preventDefault();
+	console.log(this.state)
 }
 
 render() {
@@ -36,7 +46,7 @@ render() {
 				type="text"
 				value={this.state.value}
 				placeholder="Enter username"
-				onChange={this.handleChange}
+				onChange={this.handleUsernameChange}
 				/>
 			</FormGroup>
 
@@ -47,7 +57,7 @@ render() {
 				type="password"
 				value={this.state.value}
 				placeholder="Enter password"
-				onChange={this.handleChange}
+				onChange={this.handlePasswordChange}
 				/>
 			</FormGroup>
 			<Button type="submit">Login</Button>
