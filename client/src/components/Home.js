@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
-import CommentsContainer from './comments/CommentsContainer';
-
 
 const posts = [
 {
@@ -21,7 +19,7 @@ Posts This
 const Home = () => {
 	return(
 		<div>
-			<Posts posts={posts}/>
+			<Posts/>
 		<Router>
 			<div>
 				<p>Log In, or sign up!</p>
@@ -34,7 +32,6 @@ const Home = () => {
 				<ul>
 					<Route path="/login" component={Login}/>
 					<Route path="/signup" component={Signup}/>
-					<Route path="/comments" component={CommentsContainer}/>
 				</ul>
 			</div>
 		</Router>
