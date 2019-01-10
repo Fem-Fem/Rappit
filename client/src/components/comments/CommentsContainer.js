@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-class CommentsContainer extends Component {
+const Posts = (props) => (
+		<div>
+			<h1>Posts</h1>
+			{props.posts.map(post => <h1>{post.title}</h1>)}
+		</div>
+	)
 
-	render() {
-		return(
-			<div></div>
-		)
-	}
-};
-
-const mapStateToProps = (state) => {
-	return { comments: state.comments}
-}
-
-export default connect()(CommentsContainer);
+export default Posts;
