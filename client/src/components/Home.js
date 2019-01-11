@@ -13,8 +13,9 @@ const posts = [
 
 const Posts = () => 
 <div>
-Posts This
+posts
 </div>;
+
 
 const Home = () => {
 	return(
