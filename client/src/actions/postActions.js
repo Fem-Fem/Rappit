@@ -19,7 +19,7 @@ export const fetchPosts = () => {
 
 export const createPost = post => {
 	let data = {
-		method: 'GET',
+		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'

@@ -1,7 +1,18 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'http://localhost:3000/posts'
 
-export const createComment = () => {
-	fetch(`${baseUrl}/comments`)
+export const createComment = comment => {
+
+	let data = {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+		body: JSON.stringify({comment})
+	}
+
+
+	fetch(`${baseUrl}/${}/comments`)
 	.then(response => response.json())
 	.then(comments =>dispatch({
 		type: 'ADD_COMMENT',
