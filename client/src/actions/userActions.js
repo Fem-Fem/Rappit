@@ -10,12 +10,14 @@ export const loginUser = user => {
 		body: JSON.stringify({user})
 	}
 
-	fetch(`${baseUrl}/login`)
-	.then(response => response.json())
-	.then(posts =>dispatch({
-		type: 'STORE_USER',
-	}))
-	.catch(err => err)
+	return dispatch =>{
+		fetch(`${baseUrl}/login`, data)
+		.then(response => response.json())
+		.then(user => dispatch({
+			type: 'STORE_USER',
+		}))
+		.catch(err => err)
+	}
 }
 
 export const signupUser = user => {
@@ -28,19 +30,12 @@ export const signupUser = user => {
 		body: JSON.stringify({user})
 	}
 
-	fetch(`${baseUrl}/signup`)
-	.then(response => response.json())
-	.then(posts =>dispatch({
-		type: 'STORE_USER',
-	}))
-	.catch(err => err)
-}
-
-export const logoutUser = () => {
-	fetch(`${baseUrl}/logout`)
-	.then(response => response.json())
-	.then(posts =>dispatch({
-		type: 'UNSTORE_USER',
-	}))
-	.catch(err => err)
+	return dispatch =>{
+		fetch(`${baseUrl}/signup`, data)
+		.then(response => response.json())
+		.then(user => dispatch({
+			type: 'STORE_USER',
+		}))
+		.catch(err => err)
+	}
 }
