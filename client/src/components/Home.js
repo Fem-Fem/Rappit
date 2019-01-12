@@ -1,21 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
-
-const posts = [
-{
-	title: "Kendrick Lamar",
-	content: "I really believe"
-}
-]
-
-const Posts = () => 
-<div>
-posts
-</div>;
-
 
 const Home = () => {
 	return(
