@@ -29,12 +29,14 @@ export const createPost = post => {
 		body: JSON.stringify({post})
 	}
 
-	fetch(`${baseUrl}/posts`, data)
-	.then(response => response.json())
-	.then(post => dispatch({
-		type: 'ADD_POST',
-	}))
-	.catch(err => err)
+	return dispatch => {
+		fetch(`${baseUrl}/posts`, data)
+		.then(response => response.json())
+		.then(post => dispatch({
+			type: 'ADD_POST',
+		}))
+		.catch(err => err)
+	}
 }
 
 export const editPost = (id) => {
@@ -44,15 +46,16 @@ export const editPost = (id) => {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({post})
 	}
 
-	fetch(`${baseUrl}/posts/${id}`, data)
-	.then(response => response.json())
-	.then(post =>dispatch({
-		type: 'EDIT_POST',
-	}))
-	.catch(err => err)
+	return dispatch => {
+		fetch(`${baseUrl}/posts/${id}`, data)
+		.then(response => response.json())
+		.then(post =>dispatch({
+			type: 'EDIT_POST',
+		}))
+		.catch(err => err)
+	}
 }
 
 export const deletePost = id => {
@@ -64,10 +67,12 @@ export const deletePost = id => {
 		}
 	}
 
-	fetch(`${baseUrl}/posts/${post.id}`, data)
-	.then(response => response.json())
-	.then(post =>dispatch({
-		type: 'DELETE_POST',
-	}))
-	.catch(err => err)
+	return dispatch => {
+		fetch(`${baseUrl}/posts/${id}`, data)
+		.then(response => response.json())
+		.then(post =>dispatch({
+			type: 'DELETE_POST',
+		}))
+		.catch(err => err)
+	}
 }

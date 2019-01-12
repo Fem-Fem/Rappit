@@ -9,7 +9,7 @@ export default function manage(state = {
 		case 'GET_POSTS':
 
 		case 'ADD_POST':
-			const post = {title: action.title, content: action.content, id: cuidFN()};
+			const post = {title: action.title, content: action.content, id: action.id};
 			return {
 				...state,
 				posts: [...state.posts, post]
@@ -22,7 +22,7 @@ export default function manage(state = {
 			return {...state, posts}
 
 		case 'ADD_COMMENT':
-			const comment = {content: action.comment.content, postId: action.comment.postId, id: cuidFN()};
+			const comment = {content: action.comment.content, postId: action.comment.postId, id: action.comment.id};
 			return {
 				...state,
 				comments: [...state.comments, comment]
@@ -31,7 +31,7 @@ export default function manage(state = {
 		case 'EDIT_COMMENT':
 
 		case 'DELETE_COMMENT':
-			const comments = state.comments.filter(comment => comment.id! == action.id);
+			const comments = state.comments.filter(comment => comment.id !== action.id);
 			return {...state, comments}
 
 		default:

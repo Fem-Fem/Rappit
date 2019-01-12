@@ -1,6 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {ControlLabel, FormGroup, FormControl, Button} from 'react-boostrap';
 
 import { createPost } from '../actions/postActions'
 
@@ -36,7 +37,7 @@ handleSubmit = event => {
 		content: ""})
 }
 
-render(
+render(){
 	return (
 		<form onSubmit = {this.handleSubmit}>
 			<FormGroup>
@@ -50,7 +51,7 @@ render(
 				/>
 			</FormGroup>
 
-			<FormGroup
+			<FormGroup>
 				<ControlLabel>Content</ControlLabel>
 				<FormControl
 				name="content"
@@ -63,11 +64,12 @@ render(
 			<Button type="submit">Upload Post</Button>
 		</form>
 		)
-)
+	}
+}
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	createPost}
+	createPost
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(PostForm)
