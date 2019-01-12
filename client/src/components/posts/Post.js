@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Post = props => {
+const Post = ({post: {id, title, content}, deletePost}) => {
 	return (
 		<div>
 			<li>
-				{props.content}
+				{title}
+				<button onClick={() => deletePost(id, postId)}>Delete</button>
 			</li>
 		</div>
 	)
