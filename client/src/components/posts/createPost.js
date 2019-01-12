@@ -1,5 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { createPost } from '../actions/postActions'
 
 class CreatePost extends Component {
 
