@@ -1,5 +1,7 @@
 {
   "name": "Final_Project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "redux-thunk": "^2.3.0"
+  }
 }
