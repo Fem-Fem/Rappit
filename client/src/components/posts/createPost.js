@@ -53,4 +53,4 @@ render(
 		)
 )
 
-export default connect(null, mapDispatchtoProps)(CreatePost)
+export default connect(null, mapDispatchtoProps)(createPost)

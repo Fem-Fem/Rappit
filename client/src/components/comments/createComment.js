@@ -45,5 +45,5 @@ handleSubmit = event => {
 			)
 		}
 	}
-
-export default connect(null, mapDispatchtoProps)(CreateComment)
+	
+export default connect(null, mapDispatchtoProps)(createComment)
