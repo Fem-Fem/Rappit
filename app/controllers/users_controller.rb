@@ -5,7 +5,19 @@ class UsersController < ActionController::Base
 
   def create
     @user = User.new(user_params)
-  	user_path(@user)
+  	if @user.valid?
+      @user.save
+    else
+      render json: {error: 'Invalid Option Given!'}
+  end
+
+  def login
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
+      session[:username] = params[:username]
+    else
+      render json: {error: 'Invalid Option Given!'}
+    end
   end
 
   private
