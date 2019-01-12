@@ -53,7 +53,7 @@ export const editPost = post => {
 	.catch(err => err)
 }
 
-export const createPost = post => {
+export const deletePost = post => {
 	let data = {
 		method: 'POST',
 		headers: {
