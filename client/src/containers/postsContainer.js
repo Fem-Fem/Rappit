@@ -9,9 +9,3 @@ class PostsContainer extends Component {
 		)
 	}
 };
-
-const mapStateToProps = (state) => {
-	return { comments: state.posts}
-}
-
-export default connect()(PostsContainer);
