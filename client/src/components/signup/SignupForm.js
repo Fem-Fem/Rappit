@@ -72,3 +72,9 @@ render() {
 		)
 	}
 }
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+	signupUser}
+}, dispatch)
+
+export default connect(null, mapDispatchToProps)(signupUser)
