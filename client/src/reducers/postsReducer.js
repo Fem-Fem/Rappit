@@ -6,16 +6,12 @@ export default function manage(state = {
 
 	switch (action.type) {
 
-		case 'GET_POSTS':
-
 		case 'ADD_POST':
 			const post = {title: action.title, content: action.content, id: action.id};
 			return {
 				...state,
 				posts: [...state.posts, post]
 			}
-
-		case 'EDIT_POST':
 
 		case 'DELETE_POST':
 			const posts = state.posts.filter(post => post.id !== action.id);
@@ -27,8 +23,6 @@ export default function manage(state = {
 				...state,
 				comments: [...state.comments, comment]
 			}
-
-		case 'EDIT_COMMENT':
 
 		case 'DELETE_COMMENT':
 			const comments = state.comments.filter(comment => comment.id !== action.id);

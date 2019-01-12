@@ -33,7 +33,7 @@ export const createPost = post => {
 		fetch(`${baseUrl}/posts`, data)
 		.then(response => response.json())
 		.then(post => dispatch({
-			type: 'ADD_POST',
+			type: 'ADD_POST'
 		}))
 		.catch(err => err)
 	}

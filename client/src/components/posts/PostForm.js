@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {ControlLabel, FormGroup, FormControl, Button} from 'react-boostrap';
+import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 
-import { createPost } from '../actions/postActions'
+//import { createPost } from '../actions/postActions'
 
 class PostForm extends Component {
 
