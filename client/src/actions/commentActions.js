@@ -11,8 +11,7 @@ export const createComment = comment => {
 		body: JSON.stringify({comment})
 	}
 
-
-	fetch(`${baseUrl}/${}/comments`)
+	fetch(`${baseUrl}/${comment.id}/comments`)
 	.then(response => response.json())
 	.then(comments =>dispatch({
 		type: 'ADD_COMMENT',
