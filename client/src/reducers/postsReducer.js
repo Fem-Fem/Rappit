@@ -1,6 +1,3 @@
-import cuid from 'cuid';
-export const cuidFN = cuid;
-
 export default function manage(state = {
 	posts: [],
 	comments: [],
