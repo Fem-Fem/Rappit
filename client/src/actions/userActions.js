@@ -1,6 +1,15 @@
 const baseUrl = 'http://localhost:3000'
 
-export const loginUser = () => {
+export const loginUser = user => {
+	let data = {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+		body: JSON.stringify({user})
+	}
+
 	fetch(`${baseUrl}/login`)
 	.then(response => response.json())
 	.then(posts =>dispatch({
@@ -9,7 +18,16 @@ export const loginUser = () => {
 	.catch(err => err)
 }
 
-export const signupUser = () => {
+export const signupUser = user => {
+	let data = {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+		body: JSON.stringify({user})
+	}
+
 	fetch(`${baseUrl}/signup`)
 	.then(response => response.json())
 	.then(posts =>dispatch({
