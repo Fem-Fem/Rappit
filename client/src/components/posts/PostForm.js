@@ -69,7 +69,7 @@ render(){
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	createPost
+//	createPost
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(PostForm)
