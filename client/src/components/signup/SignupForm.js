@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { signupUser } from '../actions/signupUser';
 
-export default class SignupForm extends Component {
+class SignupForm extends Component {
 
 	constructor(props) {
 		super(props);
@@ -74,7 +74,7 @@ render() {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	signupUser}
+	signupUser
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(signupUser)

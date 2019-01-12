@@ -6,7 +6,7 @@ export const loginUser = user => {
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
 		body: JSON.stringify({user})
 	}
 
@@ -24,7 +24,7 @@ export const signupUser = user => {
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
 		body: JSON.stringify({user})
 	}
 

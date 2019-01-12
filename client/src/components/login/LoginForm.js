@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { loginUser } from '../actions/loginUser'
 
-export default class LoginForm extends Component {
+class LoginForm extends Component {
 
 	constructor(props) {
 		super(props);
@@ -74,7 +74,7 @@ render() {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	loginUser}
+	loginUser
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(LoginForm)

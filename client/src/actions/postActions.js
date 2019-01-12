@@ -11,7 +11,7 @@ export const fetchPosts = () => {
 
 	fetch(`${baseUrl}/posts`, data)
 	.then(response => response.json())
-	.then(posts =>dispatch({
+	.then(posts => dispatch({
 		type: 'GET_POSTS',
 	}))
 	.catch(err => err)
@@ -23,13 +23,13 @@ export const createPost = post => {
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
 		body: JSON.stringify({post})
 	}
 
 	fetch(`${baseUrl}/posts`, data)
 	.then(response => response.json())
-	.then(post =>dispatch({
+	.then(post => dispatch({
 		type: 'ADD_POST',
 	}))
 	.catch(err => err)
@@ -41,7 +41,7 @@ export const editPost = (id) => {
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
 		body: JSON.stringify({post})
 	}
 

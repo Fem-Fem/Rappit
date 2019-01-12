@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { createPost } from '../actions/postActions'
 
-class CreatePost extends Component {
+class PostForm extends Component {
 
 	constructor() {
 		super();
@@ -70,4 +70,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	createPost}
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(createPost)
+export default connect(null, mapDispatchToProps)(PostForm)
