@@ -74,7 +74,7 @@ render() {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-//	loginUser
+	loginUser
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(LoginForm)

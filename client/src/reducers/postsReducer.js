@@ -1,4 +1,4 @@
-export default function manage(state = {
+export default function postsReducer(state = {
 	posts: [],
 	comments: [],
 	logged_in: [],
