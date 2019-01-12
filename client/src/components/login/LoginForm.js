@@ -33,6 +33,7 @@ handlePasswordChange = event => {
 
 handleSubmit = event => {
 	event.preventDefault();
+
 	console.log(this.state)
 }
 
