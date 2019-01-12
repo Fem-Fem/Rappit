@@ -6,7 +6,6 @@ import Login from './login/LoginPage'
 const Home = () => {
 	return(
 		<div>
-			<Posts/>
 		<Router>
 			<div>
 				<p>Log In, or sign up!</p>

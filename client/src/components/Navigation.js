@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, NavLink, Link} from "react-router-dom";
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
-import Posts from '././containers/postsContainer';
-import Posts from './posts/createPost';
+//import Posts from '././containers/postsContainer';
 
 
 const Navigation = () => {
@@ -20,8 +19,6 @@ const Navigation = () => {
 				<ul>
 					<Route path="/login" component={Login}/>
 					<Route path="/signup" component={Signup}/>
-					<Route path="/posts" component={Posts}/>
-					<Route path="/posts/new" component={PostForm}/>
 				</ul>
 			</div>
 		</Router>
