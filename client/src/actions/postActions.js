@@ -9,11 +9,3 @@ export const fetchPosts = () => {
 	}))
 	.catch(err => err)
 }
-
-class App extends Component {
-  componentDidMount() {
-    window.fetch('api/drinks')
-      .then(response => response.json())
-      .then(json => console.log(json))
-      .catch(error => console.log(error))
-}
