@@ -9,12 +9,14 @@ export const fetchPosts = () => {
 		}
 	}
 
-	fetch(`${baseUrl}/posts`, data)
-	.then(response => response.json())
-	.then(posts => dispatch({
-		type: 'GET_POSTS',
-	}))
-	.catch(err => err)
+	return dispatch => {
+		fetch(`${baseUrl}/posts`, data)
+		.then(response => response.json())
+		.then(posts => dispatch({
+			type: 'GET_POSTS',
+		}))
+		.catch(err => err)
+	}
 }
 
 export const createPost = post => {

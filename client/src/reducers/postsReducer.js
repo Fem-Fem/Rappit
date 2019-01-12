@@ -18,7 +18,7 @@ export default function manage(state = {
 		case 'EDIT_POST':
 
 		case 'DELETE_POST':
-			const posts = state.posts.filter(post => post.id! == action.id);
+			const posts = state.posts.filter(post => post.id !== action.id);
 			return {...state, posts}
 
 		case 'ADD_COMMENT':
