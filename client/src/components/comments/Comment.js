@@ -3,7 +3,7 @@ import React from 'react'
 const Comment = ({comment: {id, content}, postId, title, deleteComment}) =>
 	<div>
 		<li>
-			{description}
+			{content}
 			<button onClick={() => deleteComment(id, postId)}>Delete</button>
 		</li>
 	</div>

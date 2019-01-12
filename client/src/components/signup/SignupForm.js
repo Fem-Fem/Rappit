@@ -1,5 +1,9 @@
 import React, {Component} from "react";
 import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { signupUser } from '../actions/signupUser';
 
 export default class SignupForm extends Component {
 
@@ -33,6 +37,9 @@ handlePasswordChange = event => {
 
 handleSubmit = event => {
 	event.preventDefault();
+
+	const user = this.state
+	this.props.signupUser(user)
 	console.log(this.state)
 }
 

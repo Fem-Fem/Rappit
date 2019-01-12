@@ -5,7 +5,7 @@ const Post = ({post: {id, title, content}, deletePost}) => {
 		<div>
 			<li>
 				{title}
-				<button onClick={() => deletePost(id, postId)}>Delete</button>
+				<button onClick={() => deletePost(id)}>Delete</button>
 			</li>
 		</div>
 	)
