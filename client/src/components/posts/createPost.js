@@ -14,17 +14,27 @@ class CreatePost extends Component {
 		};
 	}
 
-	handleTitleChange(event) {
+handleTitleChange = event => {
 		this.setState({
 			title: event.target.value
 		})
 	}
 
-	handleContentChange(event) {
+handleContentChange = event => {
 		this.setState({
 			content: event.target.value,
 		})
 	}
+
+handleSubmit = event => {
+	event.preventDefault();
+
+	console.log(this.state);
+	this.props.createPost(this.state)
+	this.setState({
+		title: "",
+		content: ""})
+}
 
 render(
 	return (
@@ -55,4 +65,9 @@ render(
 		)
 )
 
-export default connect(null, mapDispatchtoProps)(createPost)
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+	createPost}
+}, dispatch)
+
+export default connect(null, mapDispatchToProps)(createPost)

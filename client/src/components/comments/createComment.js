@@ -24,7 +24,10 @@ handleChange = event => {
 
 handleSubmit = event => {
 	event.preventDefault();
+
 	console.log(this.state);
+	const {postId} = this.props
+	this.props.createComment(this.state, postId)
 	this.setState({content: ""})
 }
 
@@ -48,5 +51,9 @@ handleSubmit = event => {
 			)
 		}
 	}
-	
-export default connect(null, mapDispatchtoProps)(createComment)
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+	createComment}
+}, dispatch)
+
+export default connect(null, mapDispatchToProps)(createComment)
