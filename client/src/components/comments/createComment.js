@@ -8,13 +8,22 @@ class CreateComment extends Component {
 		this.state = {
 			content: '',
 		};
+
+		this.handleChange = this.handleChange.bind(this)
+		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
-	handleChange(event) {
-		this.setState({
-			content: event.target.value
-		})
-	}
+handleChange = event => {
+	this.setState({
+		content: event.target.value
+	})
+}
+
+handleSubmit = event => {
+	event.preventDefault();
+	console.log(this.state);
+	this.setState({content: ""})
+}
 
 
 	render() {
