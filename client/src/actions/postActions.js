@@ -27,7 +27,7 @@ export const createPost = post => {
 		body: JSON.stringify({post})
 	}
 
-	fetch(`${baseUrl}/posts`)
+	fetch(`${baseUrl}/posts`, data)
 	.then(response => response.json())
 	.then(post =>dispatch({
 		type: 'ADD_POST',
@@ -35,9 +35,9 @@ export const createPost = post => {
 	.catch(err => err)
 }
 
-export const editPost = post => {
+export const editPost = (id) => {
 	let data = {
-		method: 'POST',
+		method: 'PATCH',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ export const editPost = post => {
 		body: JSON.stringify({post})
 	}
 
-	fetch(`${baseUrl}/posts`)
+	fetch(`${baseUrl}/posts/${id}`, data)
 	.then(response => response.json())
 	.then(post =>dispatch({
 		type: 'EDIT_POST',
@@ -53,14 +53,13 @@ export const editPost = post => {
 	.catch(err => err)
 }
 
-export const deletePost = post => {
+export const deletePost = id => {
 	let data = {
-		method: 'POST',
+		method: 'DELETE',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		}
-		body: JSON.stringify({post})
 	}
 
 	fetch(`${baseUrl}/posts/${post.id}`, data)

@@ -11,7 +11,7 @@ export const createComment = comment => {
 		body: JSON.stringify({comment})
 	}
 
-	fetch(`${baseUrl}/${comment.id}/comments`)
+	fetch(`${baseUrl}/${comment.id}/comments`, data)
 	.then(response => response.json())
 	.then(comments =>dispatch({
 		type: 'ADD_COMMENT',
@@ -19,7 +19,7 @@ export const createComment = comment => {
 	.catch(err => err)
 }
 
-export const editComment = comment => {
+export const editComment = (id, comment) => {
 
 	let data = {
 		method: 'PATCH',
@@ -38,7 +38,7 @@ export const editComment = comment => {
 	.catch(err => err)
 }
 
-export const deleteComment = comment => {
+export const deleteComment = (id, postId) => {
 
 	let data = {
 		method: 'DELETE',
@@ -46,10 +46,9 @@ export const deleteComment = comment => {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		}
-		body: JSON.stringify({comment})
 	}
 	
-	fetch(`${baseUrl}/${comment.post.id}/comments/${comment.id}`, data)
+	fetch(`${baseUrl}/${postId}/comments/${id}`, data)
 	.then(response => response.json())
 	.then(comments =>dispatch({
 		type: 'DELETE_COMMENT',
