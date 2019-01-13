@@ -8,15 +8,16 @@ import Comment from '../components/comments/Comment'
 
 class commentsContainer extends Component {
 	componentWillMount() {
-		this.props.fetchComments(this.props)
+		this.props.fetchComments(this.props.current_post.id)
 	}
 
 	render() {
 
-		const { comments } = this.props
+		const { current_post_comments } = this.props.current_post_comments
 		return(
 			<div>
 				<CommentForm/>
+				{current_post_comments.map(comment => <Comment id= {comment.id} comment={comment} deleteComment={this.props.deleteComment}/>)}
 			</div>
 		)
 	}
@@ -25,7 +26,9 @@ class commentsContainer extends Component {
 const mapStateToProps = state => {
 	return {
 		user: state.user.logged_in,
-		posts: state.posts.posts
+		posts: state.posts.posts,
+		current_post: state.posts.current_post,
+		current_post_comments: state.posts.current_post_comments
 	}
 }
 

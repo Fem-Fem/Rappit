@@ -1,17 +1,16 @@
 const baseUrl = 'http://localhost:3001/posts'
 
-export const fetchComments = post => {
+export const fetchComments = postId => {
 	let data = {
 		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({post})
 	}
 
 	return dispatch => {
-		fetch(`${baseUrl}/posts`, data)
+		fetch(`${baseUrl}/posts/${postId}`, data)
 		.then(response => response.json())
 		.then(comments => dispatch({
 			type: 'GET_COMMENTS',
