@@ -20,7 +20,8 @@ export default function postsReducer(state = {
 		case 'ADD_POST':
 			return {
 				...state,
-				posts: [...state.posts, action.payload]
+				posts: [...state.posts, action.payload],
+				current_post: action.payload
 			}
 
 		case 'ADD_COMMENT':

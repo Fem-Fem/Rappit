@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import commentsContainer from '../../containers/commentsContainer';
 
 
-const Post = ({post: {id, title, content}, deletePost}) => {
+const Post = ({post: {id, title, content, user_id}, deletePost}) => {
 	return (
 		<div>
 		<li>
