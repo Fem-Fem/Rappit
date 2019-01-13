@@ -14,7 +14,9 @@ class CommentsController < ActionController::Base
   end
 
   def show
-    @comment = Comment.find(params[:id])
+    post = Post.find(params[:post_id])
+    id = params[:id].to_i - 1
+    @comment = post.comments[id]
     render json: @comment
   end
 
@@ -33,7 +35,13 @@ class CommentsController < ActionController::Base
   end
 
   def index
-      @comments = Comment.all
+      @comments = []
+      Comment.all.each do |comment|
+        if comment.post_id == params[:post_id].to_i
+          @comments << comment
+        end
+      end
+      render json: @comments
   end
 
   def delete
