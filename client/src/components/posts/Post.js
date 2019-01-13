@@ -8,8 +8,10 @@ const Post = ({post: {id, title, content}, deletePost}) => {
 		<div>
 		<li>
 		<Router>
+			<div>
 			<Link to="/thispost">{title}</Link>
 			<Route path="/thispost" component={commentsContainer}/>
+			</div>
 		</Router>
 				<button onClick={() => deletePost(id)}>Delete</button>
 			</li>
