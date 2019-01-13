@@ -8,7 +8,7 @@ export default function userReducer(state = {
 			// const user = {title: action.username};
 			return {
 				...state,
-				logged_in: [action.payload.id]
+				logged_in: [action.payload]
 			}
 
 		case 'UNSTORE_USER':

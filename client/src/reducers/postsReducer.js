@@ -1,6 +1,5 @@
 export default function postsReducer(state = {
 	posts: [],
-	logged_in: [],
 	current_post: [],
 	current_post_comments: []
 }, action) {
