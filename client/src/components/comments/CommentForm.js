@@ -1,8 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 
-import { createComment } from '../actions/postActions'
+import { createComment } from '../../actions/commentActions'
 
 class CommentForm extends Component {
 
@@ -53,7 +54,7 @@ handleSubmit = event => {
 	}
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	createComment}
+	createComment
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(CommentForm)
