@@ -13,13 +13,20 @@ class postsContainer extends Component {
 
 	render() {
 
-		const { posts } = this.props.posts
+		const { posts } = this.props
 		return(
 			<div>
 				<PostForm/>
 				{posts.map(post => <Post id= {post.id} post={post} deletePost={this.props.deletePost}/>)}
 			</div>
 		)
+	}
+}
+
+const mapStateToProps = state => {
+	return {
+		user: state.user.logged_in,
+		posts: state.posts.posts
 	}
 }
 
@@ -30,4 +37,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	deletePost
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(postsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(postsContainer)

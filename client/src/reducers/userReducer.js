@@ -1,5 +1,5 @@
 export default function userReducer(state = {
-	logged_in: [],
+	logged_in: []
 }, action) {
 
 	switch (action.type) {

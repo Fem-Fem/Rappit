@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/posts'
+const baseUrl = 'http://localhost:3001/posts'
 
 export const createComment = comment => {
 

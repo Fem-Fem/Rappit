@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'http://localhost:3001'
 
 export const fetchPosts = () => {
 	let data = {
@@ -14,6 +14,7 @@ export const fetchPosts = () => {
 		.then(response => response.json())
 		.then(posts => dispatch({
 			type: 'GET_POSTS',
+			payload: posts
 		}))
 		.catch(err => err)
 	}

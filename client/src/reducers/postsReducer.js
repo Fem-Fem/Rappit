@@ -1,7 +1,6 @@
 export default function postsReducer(state = {
 	posts: [],
-	comments: [],
-	logged_in: [],
+	logged_in: []
 }, action) {
 
 	switch (action.type) {
@@ -11,6 +10,11 @@ export default function postsReducer(state = {
 			return {
 				...state,
 				posts: [...state.posts, post]
+			}
+
+		case 'GET_POSTS':
+			return {
+				...state, posts: action.payload
 			}
 
 		case 'DELETE_POST':
