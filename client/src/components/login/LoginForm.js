@@ -3,7 +3,8 @@ import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-//import { loginUser } from 'actions/postActions'
+import { loginUser } from '../../actions/userActions'
+
 
 class LoginForm extends Component {
 
@@ -74,7 +75,7 @@ render() {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-//	loginUser
+	loginUser
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(LoginForm)
