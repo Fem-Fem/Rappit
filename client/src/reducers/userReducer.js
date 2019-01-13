@@ -5,10 +5,10 @@ export default function userReducer(state = {
 	switch (action.type) {
 
 		case 'STORE_USER':
-			const user = {title: action.username};
+			// const user = {title: action.username};
 			return {
 				...state,
-				logged_in: [true]
+				logged_in: [action.payload]
 			}
 
 		case 'UNSTORE_USER':

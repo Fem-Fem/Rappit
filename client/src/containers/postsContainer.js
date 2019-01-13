@@ -13,7 +13,7 @@ class postsContainer extends Component {
 
 	render() {
 
-		const posts = this.props
+		const { posts } = this.props.posts
 		return(
 			<div>
 				<PostForm/>

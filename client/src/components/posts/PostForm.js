@@ -41,7 +41,7 @@ render(){
 	return (
 		<form onSubmit = {this.handleSubmit}>
 			<FormGroup>
-				<ControlLabel>Username</ControlLabel>
+				<ControlLabel>Title</ControlLabel>
 				<FormControl
 				name="title"
 				type="text"
