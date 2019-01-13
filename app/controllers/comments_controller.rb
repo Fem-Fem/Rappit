@@ -6,10 +6,9 @@ class CommentsController < ActionController::Base
   def create
     @comment = Comment.new(post_params)
     if @comment.save
-    	redirect_to post_path(@comment)
+    	render json: @comment
     else
-      @errors = @comment.errors
-      erb :'/new'
+      render json: {error: 'Does not exist!'}
     end
   end
 
@@ -45,6 +44,11 @@ class CommentsController < ActionController::Base
   end
 
   def delete
+    @post = Post.find(params[:post_id])
+    id = params[:id].to_i - 1
+    @comment = post.comments[id]
+    @comment.destroy
+    render json: @post
   end
 
   private

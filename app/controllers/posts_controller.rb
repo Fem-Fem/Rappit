@@ -8,13 +8,18 @@ class PostsController < ActionController::Base
     if @post.save
     	render json :@post
     else
+       render json: {error: 'Does not exist!'}
       # render json {message: @post.errors}, status: 301
     end
   end
 
   def show
     @post = Post.find(params[:id])
-    render json: @post
+    if @post
+      render json: @post
+    else
+       render json: {error: 'Does not exist!'}
+     end
   end
 
   def edit
