@@ -13,11 +13,11 @@ class commentsContainer extends Component {
 
 	render() {
 
-		const { posts } = this.props
+		const { comments } = this.props
 		return(
 			<div>
 				<CommentForm/>
-				{posts.map(post => <Post id= {post.id} post={post} deleteComment={this.props.deleteComment}/>)}
+				{comments.map(post => <Comment id= {comment.id} comment={comment} deleteComment={this.props.deleteComment}/>)}
 			</div>
 		)
 	}

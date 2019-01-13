@@ -34,7 +34,8 @@ export const createPost = post => {
 		fetch(`${baseUrl}/posts`, data)
 		.then(response => response.json())
 		.then(post => dispatch({
-			type: 'ADD_POST'
+			type: 'ADD_POST',
+			payload: post
 		}))
 		.catch(err => err)
 	}
@@ -54,6 +55,7 @@ export const editPost = (id) => {
 		.then(response => response.json())
 		.then(post =>dispatch({
 			type: 'EDIT_POST',
+			payload: post
 		}))
 		.catch(err => err)
 	}
@@ -73,6 +75,7 @@ export const deletePost = id => {
 		.then(response => response.json())
 		.then(post =>dispatch({
 			type: 'DELETE_POST',
+			payload: post
 		}))
 		.catch(err => err)
 	}

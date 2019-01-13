@@ -5,16 +5,15 @@ export default function postsReducer(state = {
 
 	switch (action.type) {
 
-		case 'ADD_POST':
-			const post = {title: action.title, content: action.content, id: action.id};
-			return {
-				...state,
-				posts: [...state.posts, post]
-			}
-
 		case 'GET_POSTS':
 			return {
 				...state, posts: action.payload
+			}
+
+		case 'ADD_POST':
+			return {
+				...state,
+				posts: [...state.posts, action.payload]
 			}
 
 		case 'DELETE_POST':

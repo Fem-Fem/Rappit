@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 
-//import { createPost } from '../actions/postActions'
+import { createPost } from '../../actions/postActions'
 
 class PostForm extends Component {
 
@@ -69,7 +69,7 @@ render(){
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-//	createPost
+	createPost
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(PostForm)
