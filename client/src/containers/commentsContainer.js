@@ -8,7 +8,7 @@ import Comment from '../components/comments/Comment'
 
 class commentsContainer extends Component {
 	componentWillMount() {
-		this.props.fetchComments()
+		this.props.fetchComments(this.props)
 	}
 
 	render() {
