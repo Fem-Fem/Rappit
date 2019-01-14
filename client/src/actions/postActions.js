@@ -20,6 +20,26 @@ export const fetchPosts = () => {
 	}
 }
 
+export const fetchPost = id => {
+	let data = {
+		method: 'GET',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+	}
+
+	return dispatch => {
+		fetch(`${baseUrl}/posts/${id}`, data)
+		.then(response => response.json())
+		.then(post => dispatch({
+			type: 'GET_POST',
+			payload: post
+		}))
+		.catch(err => err)
+	}
+}
+
 export const createPost = post => {
 	let data = {
 		method: 'POST',

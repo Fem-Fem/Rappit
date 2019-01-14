@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import commentsContainer from '../../containers/commentsContainer';
 
 
-const Post = ({post: {id, title, content, user_id}, deletePost}) => {
+const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 	return (
 		<div>
 		<li>
 		<Router>
 			<div>
-			<Link to={`/${id}`}>{title}</Link>
+			<Link to={`/${id}`} onClick={() => fetchPost(id)}>{title}</Link>
 			<Route path={`/${id}`} component={commentsContainer}/>
 			</div>
 		</Router>
