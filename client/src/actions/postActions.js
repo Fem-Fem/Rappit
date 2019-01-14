@@ -83,7 +83,7 @@ export const editPost = (id) => {
 
 export const deletePost = id => {
 	let data = {
-		method: 'DELETE',
+		method: 'DESTROY',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'

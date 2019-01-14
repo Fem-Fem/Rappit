@@ -1,6 +1,6 @@
 const baseUrl = 'http://localhost:3001/posts'
 
-export const createComment = comment => {
+export const createComment = (comment, postId) => {
 
 	let data = {
 		method: 'POST',
@@ -12,7 +12,7 @@ export const createComment = comment => {
 	}
 
 	return dispatch => {
-		fetch(`${baseUrl}/${comment.id}/comments`, data)
+		fetch(`${baseUrl}/${postId}/comments`, data)
 		.then(response => response.json())
 		.then(comments =>dispatch({
 			type: 'ADD_COMMENT',
