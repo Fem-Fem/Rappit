@@ -7,7 +7,7 @@ import { fetchPosts, createPost, deletePost, editPost, fetchPost } from '../acti
 import PostForm from '../components/posts/PostForm'
 import Post from '../components/posts/Post'
 
-class postsContainer extends Component {
+class PostsContainer extends Component {
 	componentWillMount() {
 		this.props.fetchPosts()
 	}

@@ -13,10 +13,13 @@ export const loginUser = user => {
 	return dispatch => {
 		fetch(`${baseUrl}/login`, data)
 		.then(response => response.json())
-		.then(user => dispatch({
+		.then(user => {
+			sessionStorage.setItem('logged_in', user.id)
+			dispatch({
 			type: 'STORE_USER',
 			payload: user
-		}))
+		})
+		})
 		.catch(err => err)
 	}
 }

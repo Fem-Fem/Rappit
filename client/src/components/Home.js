@@ -6,8 +6,7 @@ import Login from './login/LoginPage'
 const Home = () => {
 	return(
 		<div>
-		<Router>
-		</Router>
+			Login or Signup to use Rappit!
 		</div>
 		)
 	}

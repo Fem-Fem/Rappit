@@ -28,6 +28,7 @@ handleSubmit = event => {
 
 	console.log(this.state);
 	const {postId} = this.props
+	debugger
 	this.props.createComment(this.state, postId)
 	this.setState({content: ""})
 }
