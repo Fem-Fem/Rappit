@@ -24,22 +24,26 @@ export const loginUser = user => {
 	}
 }
 
-// export const signupUser = user => {
-// 	let data = {
-// 		method: 'POST',
-// 		headers: {
-// 			'Accept': 'application/json',
-// 			'Content-Type': 'application/json'
-// 		},
-// 		body: JSON.stringify({user})
-// 	}
+export const signupUser = user => {
+	let data = {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({user})
+	}
 
-// 	return dispatch =>{
-// 		fetch(`${baseUrl}/signup`, data)
-// 		.then(response => response.json())
-// 		.then(user => dispatch({
-// 			type: 'STORE_USER',
-// 		}))
-// 		.catch(err => err)
-// 	}
-// }
+	return dispatch =>{
+		fetch(`${baseUrl}/signup`, data)
+		.then(response => response.json())
+		.then(user => {
+			sessionStorage.setItem('logged_in', user.id)
+			dispatch({
+			type: 'STORE_USER',
+			payload: user
+		})
+		})
+		.catch(err => err)
+	}
+}

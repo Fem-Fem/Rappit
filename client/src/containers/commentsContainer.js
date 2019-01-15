@@ -7,6 +7,8 @@ import CommentForm from '../components/comments/CommentForm'
 import Comment from '../components/comments/Comment'
 
 class commentsContainer extends Component {
+	// $("#comments").innerHTML = '';
+
 	// componentWillMount() {
 	// 	this.props.fetchComments(this.props.current_post.id)
 	// }
@@ -15,7 +17,7 @@ class commentsContainer extends Component {
 
 		const { current_post, current_post_comments } = this.props
 		return(
-			<div>
+			<div id="comments">
 				<CommentForm/>
 				{current_post_comments.map(comment => <Comment id= {comment.id} comment={comment} deleteComment={this.props.deleteComment}/>)}
 			</div>
