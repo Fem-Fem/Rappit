@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, Link} from "react-router-dom";
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
-import PostsContainer from '../containers/postsContainer';
+import PostsContainer from '../containers/PostsContainer';
 
 
 const Navigation = () => {
@@ -24,7 +24,7 @@ const Navigation = () => {
 const loggedIn = () => !!sessionStorage['logged_in']
 
 const logout = () => {
-	if(sessionStorage['loggedIn']) sessionStorage.removeItem('logged_in')
+	if(sessionStorage['logged_in']) sessionStorage.removeItem('logged_in')
 
 	return <Redirect to="/login"/>
 }

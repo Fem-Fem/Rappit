@@ -10,6 +10,7 @@ class PostForm extends Component {
 	constructor() {
 		super();
 		this.state = {
+			user_id: sessionStorage['logged_in'],
 			content: '',
 			title: '',
 		};
