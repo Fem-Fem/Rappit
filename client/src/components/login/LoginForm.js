@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter, Link} from 'react-router-dom';
 
 import { loginUser } from '../../actions/userActions'
 
@@ -40,7 +41,7 @@ handleSubmit = event => {
 	event.preventDefault();
 
 	const user = this.state
-	this.props.loginUser(user)
+	this.props.loginUser(user, () => this.props.history.push('/'))
 	console.log(this.state)
 }
 
@@ -78,4 +79,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	loginUser
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(LoginForm)
+export default withRouter(connect(null, mapDispatchToProps)(LoginForm))

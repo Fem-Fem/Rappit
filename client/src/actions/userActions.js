@@ -1,6 +1,6 @@
 const baseUrl = 'http://localhost:3001'
 
-export const loginUser = user => {
+export const loginUser = (user, callback) => {
 	let data = {
 		method: 'POST',
 		headers: {
@@ -19,6 +19,8 @@ export const loginUser = user => {
 			type: 'STORE_USER',
 			payload: user
 		})
+
+			callback()
 		})
 		.catch(err => err)
 	}
