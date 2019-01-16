@@ -1,6 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import commentsContainer from '../../containers/commentsContainer';
+import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, Link} from "react-router-dom";
 
 
 const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {

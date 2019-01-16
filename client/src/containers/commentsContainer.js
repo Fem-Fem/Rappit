@@ -6,15 +6,16 @@ import { createComment, deleteComment } from '../actions/commentActions'
 import CommentForm from '../components/comments/CommentForm'
 import Comment from '../components/comments/Comment'
 
+import { fetchPosts} from '../actions/postActions'
+
+
 class commentsContainer extends Component {
 	// $("#comments").innerHTML = '';
 
-	// componentWillMount() {
-	// 	this.props.fetchComments(this.props.current_post.id)
-	// }
+	componentWillMount() {
+	}
 
 	render() {
-
 		const { current_post, current_post_comments } = this.props
 		return(
 			<div id="comments">
@@ -37,7 +38,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => bindActionCreators({
 	createComment,
-	deleteComment
+	deleteComment,
+	fetchPosts
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(commentsContainer)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+// import Navigation from "../components/Navigation"
 
 import { fetchPosts, createPost, deletePost, editPost, fetchPost } from '../actions/postActions'
 // import {fetchComments} from '../actions/commentActions'

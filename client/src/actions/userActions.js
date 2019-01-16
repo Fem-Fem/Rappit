@@ -26,7 +26,7 @@ export const loginUser = (user, callback) => {
 	}
 }
 
-export const signupUser = user => {
+export const signupUser = (user, callback) => {
 	let data = {
 		method: 'POST',
 		headers: {
@@ -45,6 +45,8 @@ export const signupUser = user => {
 			type: 'STORE_USER',
 			payload: user
 		})
+
+			callback()
 		})
 		.catch(err => err)
 	}

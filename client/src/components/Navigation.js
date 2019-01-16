@@ -21,7 +21,7 @@ const Navigation = () => {
 	)
 }
 
-const loggedIn = () => !!sessionStorage['logged_in']
+const loggedIn = () => !!sessionStorage['logged_in'] && !(sessionStorage['logged_in'] === 'undefined')
 
 const logout = () => {
 	if(sessionStorage['logged_in']) sessionStorage.removeItem('logged_in')
