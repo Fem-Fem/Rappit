@@ -1,4 +1,5 @@
 class PostsController < ActionController::Base
+
   def new
     @post = Post.new
   end
@@ -6,7 +7,7 @@ class PostsController < ActionController::Base
   def create
     @post = Post.new(post_params)
     if @post.save
-    	render json :@post
+    	render json: @post
     else
        render json: {error: 'Does not exist!'}
       # render json {message: @post.errors}, status: 301
@@ -14,12 +15,9 @@ class PostsController < ActionController::Base
   end
 
   def show
+    binding.pry
     @post = Post.find(params[:id])
-    if @post
-      render json: @post
-    else
-       render json: {error: 'Does not exist!'}
-     end
+    render json: @post
   end
 
   def edit
@@ -42,8 +40,11 @@ class PostsController < ActionController::Base
 
   def destroy
     @post = Post.find(params[:id])
-    if @post.destroy
-      render status: 204
+    binding.pry
+    if @post.user_id = Post.find(params[:user_id])
+      @post.destroy
+      render json: @post
+      # render status: 204
     else
       # render json: {message: "Unable to remove this post"}, status: 400
     end
@@ -52,7 +53,7 @@ class PostsController < ActionController::Base
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :user_id)
   end
 
 end

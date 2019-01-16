@@ -1,8 +1,6 @@
 const baseUrl = 'http://localhost:3001/posts'
 
 export const createComment = (comment, postId) => {
-	debugger
-
 	let data = {
 		method: 'POST',
 		headers: {
@@ -45,6 +43,7 @@ export const editComment = (id, comment) => {
 }
 
 export const deleteComment = (id, postId) => {
+	debugger
 
 	let data = {
 		method: 'DELETE',

@@ -15,7 +15,7 @@ const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 				</div>
 			</Switch>
 		</Router>
-				<button onClick={() => deletePost(id)}>Delete</button>
+				<button onClick={() => deletePost(id, user_id)}>Delete</button>
 			</li>
 		</div>
 	)

@@ -28,7 +28,7 @@ export const fetchPost = id => {
 			'Content-Type': 'application/json'
 		}
 	}
-
+	debugger
 	return dispatch => {
 		fetch(`${baseUrl}/posts/${id}`, data)
 		.then(response => response.json())
@@ -81,15 +81,16 @@ export const editPost = (id) => {
 	}
 }
 
-export const deletePost = id => {
+export const deletePost = (id, user_id) => {
 	let data = {
-		method: 'DESTROY',
+		method: 'DELETE',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
+		body: JSON.stringify({user_id})
 	}
-
+	debugger
 	return dispatch => {
 		fetch(`${baseUrl}/posts/${id}`, data)
 		.then(response => response.json())

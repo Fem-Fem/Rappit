@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 	end
 	post 'signup', :to => 'users#create' 
 	post 'login', :to => 'users#login'
+	delete '/posts/:id', to:  'posts#destroy'
 end

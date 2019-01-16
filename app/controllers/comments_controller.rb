@@ -1,10 +1,12 @@
 class CommentsController < ActionController::Base
+
   def new
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.new(post_params)
+    @comment = Comment.new(comment_params)
+    binding.pry
     if @comment.save
     	render json: @comment
     else
@@ -44,17 +46,20 @@ class CommentsController < ActionController::Base
   end
 
   def delete
-    @post = Post.find(params[:post_id])
-    id = params[:id].to_i - 1
-    @comment = post.comments[id]
-    @comment.destroy
-    render json: @post
+    binding.pry
+    @comment = Comment.find(params[:id])
+    if @comment.user_id == params[:user_id]
+      @comment.destroy
+      render json: @comment
+    else
+      render json: {error: 'Does not exist!'}
+    end
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content, :user_id, :post_id)
   end
 
 end
