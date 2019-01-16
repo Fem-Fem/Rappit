@@ -4,6 +4,9 @@ import { bindActionCreators } from 'redux';
 import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 
 import { createPost } from '../../actions/postActions'
+import '../../post.css'
+
+
 
 class PostForm extends Component {
 
@@ -40,9 +43,13 @@ handleSubmit = event => {
 
 render(){
 	return (
+		<div>
+		<div class="newformtitle">
+			New Form
+		</div>
 		<form onSubmit = {this.handleSubmit}>
 			<FormGroup>
-				<ControlLabel>Title</ControlLabel>
+				<ControlLabel>Title </ControlLabel>
 				<FormControl
 				name="title"
 				type="text"
@@ -53,7 +60,7 @@ render(){
 			</FormGroup>
 
 			<FormGroup>
-				<ControlLabel>Content</ControlLabel>
+				<ControlLabel>Content </ControlLabel>
 				<FormControl
 				name="content"
 				type="text"
@@ -64,6 +71,7 @@ render(){
 			</FormGroup>
 			<Button type="submit">Upload Post</Button>
 		</form>
+		</div>
 		)
 	}
 }

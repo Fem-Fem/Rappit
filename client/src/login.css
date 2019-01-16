@@ -1,17 +1,10 @@
-#post {
+#loginform {
 	margin: 20px;
-	font-size: 35px;
 }
 
 .center {
-	margin: 20px;
 	font-size: 15px;
 	justify-content: center;
 	text-align: center;
 	align-items: center;
-}
-
-.newformtitle {
-	font-size: 35px;
-	margin: 5px;
 }

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 // import Navigation from "../components/Navigation"
 
-import { fetchPosts, createPost, deletePost, editPost, fetchPost } from '../actions/postActions'
+import { fetchPosts, createPost, deletePost, fetchPost } from '../actions/postActions'
 // import {fetchComments} from '../actions/commentActions'
 import PostForm from '../components/posts/PostForm'
 import Post from '../components/posts/Post'
@@ -17,9 +17,9 @@ class PostsContainer extends Component {
 
 		const { posts } = this.props
 		return(
-			<div>
+			<div class="center">
 				<PostForm/>
-				{posts.map(post => <Post id= {post.id} post={post} editPost={this.props.editPost}
+				{posts.map(post => <Post id= {post.id} post={post}
 				fetchPost={this.props.fetchPost} deletePost={this.props.deletePost}/>)}
 			</div>
 		)
@@ -38,7 +38,6 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	fetchPost,
 	createPost,
 	deletePost,
-	editPost
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsContainer)

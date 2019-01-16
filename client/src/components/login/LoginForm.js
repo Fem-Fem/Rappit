@@ -49,7 +49,7 @@ render() {
 	return (
 		<form onSubmit = {this.handleSubmit}>
 			<FormGroup>
-				<ControlLabel>Username</ControlLabel>
+				<ControlLabel>Username </ControlLabel>
 				<FormControl
 				name="username"
 				type="text"
@@ -60,7 +60,7 @@ render() {
 			</FormGroup>
 
 			<FormGroup controlID="password">
-				<ControlLabel>Password</ControlLabel>
+				<ControlLabel>Password </ControlLabel>
 				<FormControl
 				name="password"
 				type="password"

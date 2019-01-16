@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { createComment, deleteComment, editComment } from '../actions/commentActions'
+import { createComment, deleteComment } from '../actions/commentActions'
 import CommentForm from '../components/comments/CommentForm'
 import Comment from '../components/comments/Comment'
 
@@ -24,8 +24,7 @@ class commentsContainer extends Component {
 				<CommentForm post={this.props.current_post}/>
 				</div>
 				{current_post_comments.map(comment => <Comment id= {comment.id} comment={comment} 
-				postId={current_post.id} userId={comment.user.id} 
-				updateComment={this.props.updateComment}deleteComment={this.props.deleteComment}/>)}
+				postId={current_post.id} userId={comment.user.id} deleteComment={this.props.deleteComment}/>)}
 			</div>
 		)
 	}

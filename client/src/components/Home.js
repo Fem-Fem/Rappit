@@ -2,12 +2,13 @@ import React from "react";
 import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom'
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
+import '../login.css'
 
 const Home = () => {
 	return(
 		<Router>
 			<Switch>
-				<div id="post">
+				<div class="center">
 					<Link to='/logout'>Logout</Link>
 					<Route path='/logout' render={ () => logout()}/>
 				</div>
