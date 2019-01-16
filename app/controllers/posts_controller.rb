@@ -38,8 +38,9 @@ class PostsController < ActionController::Base
   end
 
   def destroy
+    binding.pry
     @post = Post.find(params[:id])
-    if @post.user_id = Post.find(params[:user_id])
+    if @post.user_id == params[:user_id]
       @post.destroy
       render json: @post
     else

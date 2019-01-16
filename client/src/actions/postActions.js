@@ -87,8 +87,9 @@ export const deletePost = (id, user_id) => {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({user_id})
+		body: JSON.stringify({id, user_id})
 	}
+	debugger
 	return dispatch => {
 		fetch(`${baseUrl}/posts/${id}`, data)
 		.then(response => response.json())
