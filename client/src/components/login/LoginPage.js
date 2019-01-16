@@ -1,6 +1,6 @@
 import React from "react";
 import LoginForm from "./LoginForm";
-import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, withRouter, Link} from "react-router-dom";
 import Signup from '../signup/SignupPage';
 // import Navigation from "../Navigation"
 
@@ -13,6 +13,7 @@ class LoginPage extends React.Component {
 						<Switch>
 							<div>
 								<Link to='/signup'>Signup</Link>
+								<Route exact path='/signup' Component={withRouter(Signup)}/>
 							</div>
 						</Switch>
 					</Router>
@@ -21,4 +22,4 @@ class LoginPage extends React.Component {
 	}
 }
 
-export default LoginPage
+export default withRouter(LoginPage)
