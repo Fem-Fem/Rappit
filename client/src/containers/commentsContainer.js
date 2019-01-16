@@ -7,6 +7,7 @@ import CommentForm from '../components/comments/CommentForm'
 import Comment from '../components/comments/Comment'
 
 import { fetchPosts} from '../actions/postActions'
+import '../comment.css'
 
 
 class commentsContainer extends Component {
@@ -18,8 +19,10 @@ class commentsContainer extends Component {
 	render() {
 		const { current_post, current_post_comments } = this.props
 		return(
-			<div id="comments">
+			<div>
+			<div id="comment_form">
 				<CommentForm/>
+				</div>
 				{current_post_comments.map(comment => <Comment id= {comment.id} comment={comment} deleteComment={this.props.deleteComment}/>)}
 			</div>
 		)

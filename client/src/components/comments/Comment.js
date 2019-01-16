@@ -1,11 +1,12 @@
 import React from 'react'
+import '../../comment.css'
 
 const Comment = ({comment: {id, content}, postId, title, deleteComment}) =>
 	<div>
-		<li>
-			{content}
+		<div id="comment">
+			-{content}
 			<button onClick={() => deleteComment(id, postId)}>Delete</button>
-		</li>
+			</div>
 	</div>
 
 export default Comment
