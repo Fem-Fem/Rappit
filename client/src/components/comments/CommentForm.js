@@ -10,6 +10,8 @@ class CommentForm extends Component {
 	constructor() {
 		super();
 		this.state = {
+			post_id: '',
+			user_id: sessionStorage['logged_in'],
 			content: '',
 		};
 
@@ -19,6 +21,7 @@ class CommentForm extends Component {
 
 handleChange = event => {
 	this.setState({
+		post_id: this.props.post.id,
 		content: event.target.value
 	})
 }
@@ -27,7 +30,7 @@ handleSubmit = event => {
 	event.preventDefault();
 
 	console.log(this.state);
-	const {postId} = this.props
+	const postId = this.props.post.id
 	debugger
 	this.props.createComment(this.state, postId)
 	this.setState({content: ""})

@@ -21,7 +21,7 @@ class commentsContainer extends Component {
 		return(
 			<div>
 			<div id="comment_form">
-				<CommentForm/>
+				<CommentForm post={this.props.current_post}/>
 				</div>
 				{current_post_comments.map(comment => <Comment id= {comment.id} comment={comment} deleteComment={this.props.deleteComment}/>)}
 			</div>

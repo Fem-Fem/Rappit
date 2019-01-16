@@ -10,3 +10,4 @@ const Comment = ({comment: {id, content}, postId, title, deleteComment}) =>
 	</div>
 
 export default Comment
+

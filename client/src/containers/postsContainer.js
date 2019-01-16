@@ -19,7 +19,7 @@ class PostsContainer extends Component {
 		return(
 			<div>
 				<PostForm/>
-				{posts.map(post => <Post id= {post.id} post={post} fetchPost={this.props.fetchPost} deletePost={this.props.deletePost} editPost={this.props.editPost}/>)}
+				{posts.map(post => <Post id= {post.id} post={post} fetchPost={this.props.fetchPost} deletePost={this.props.deletePost}/>)}
 			</div>
 		)
 	}
