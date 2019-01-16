@@ -39,12 +39,11 @@ class PostsController < ActionController::Base
   end
 
   def destroy
-    @post = Post.find(params[:id])
     binding.pry
+    @post = Post.find(params[:id])
     if @post.user_id = Post.find(params[:user_id])
       @post.destroy
       render json: @post
-      # render status: 204
     else
       # render json: {message: "Unable to remove this post"}, status: 400
     end

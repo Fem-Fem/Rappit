@@ -10,8 +10,8 @@ const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 		<Router>
 			<Switch>
 				<div id="post">
-					<Link to={`/${id}`} onClick={() => fetchPost(id)}>{title}</Link> - {content}
-					<Route path={`/${id}`} component={commentsContainer}/>
+					<Link to={`/`} onClick={() => fetchPost(id)}>{title}</Link> - {content}
+					<Route path={`/`} component={commentsContainer}/>
 				</div>
 			</Switch>
 		</Router>
