@@ -6,7 +6,6 @@ class CommentsController < ActionController::Base
 
   def create
     @comment = Comment.new(comment_params)
-    binding.pry
     if @comment.save
     	render json: @comment
     else
@@ -45,10 +44,10 @@ class CommentsController < ActionController::Base
       render json: @comments
   end
 
-  def delete
+  def destroy
     binding.pry
     @comment = Comment.find(params[:id])
-    if @comment.user_id == params[:user_id]
+    if @comment.user_id == params[:userId]
       @comment.destroy
       render json: @comment
     else

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 	post 'signup', :to => 'users#create' 
 	post 'login', :to => 'users#login'
 	delete '/posts/:id', to:  'posts#destroy'
+	delete '/posts/:user_id/comments/:id', to:  'comments#destroy'
 end

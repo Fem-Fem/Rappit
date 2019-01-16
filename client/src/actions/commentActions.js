@@ -42,16 +42,18 @@ export const editComment = (id, comment) => {
 	}
 }
 
-export const deleteComment = (id, postId) => {
-	debugger
+export const deleteComment = (id, postId, userId) => {
 
 	let data = {
 		method: 'DELETE',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
-		}
+		},
+		body: JSON.stringify({postId, id, userId})
 	}
+
+	debugger
 	
 	return dispatch => {
 		fetch(`${baseUrl}/${postId}/comments/${id}`, data)
