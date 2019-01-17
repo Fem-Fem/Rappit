@@ -11,14 +11,9 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
         <div>
           <Navigation />
-          <Switch>
-        //    <Route path="/" component={Home} exact />
-          </Switch>
         </div>
-      </Router>
     );
   }
 }
