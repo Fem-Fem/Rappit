@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-// import Navigation from "../components/Navigation"
+import { withRouter, Link} from "react-router-dom";
 
 import { fetchPosts, createPost, deletePost, fetchPost } from '../actions/postActions'
-// import {fetchComments} from '../actions/commentActions'
 import PostForm from '../components/posts/PostForm'
 import Post from '../components/posts/Post'
 
@@ -21,6 +20,7 @@ class PostsContainer extends Component {
 				<PostForm/>
 				{posts.map(post => <Post key ={ post.id } id= {post.id} post={post}
 				fetchPost={this.props.fetchPost} deletePost={this.props.deletePost}/>)}
+				<Link to='/logout'>Logout</Link>
 			</div>
 		)
 	}
