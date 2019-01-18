@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import $ from 'jquery';
 
 import { createComment, deleteComment } from '../actions/commentActions'
 import CommentForm from '../components/comments/CommentForm'

@@ -56,8 +56,9 @@ export const deleteComment = (id, postId, userId) => {
 	return dispatch => {
 		fetch(`${baseUrl}/${postId}/comments/${id}`, data)
 		.then(response => response.json())
-		.then(comments =>dispatch({
+		.then(comment =>dispatch({
 			type: 'DELETE_COMMENT',
+			payload: comment
 		}))
 		.catch(err => err)
 	}

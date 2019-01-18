@@ -1,6 +1,6 @@
 import React from "react";
 import SignupForm from "./SignupForm";
-import { withRouter, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import '../../login.css'
 
