@@ -44,7 +44,7 @@ handleSubmit = event => {
 render(){
 	return (
 		<div>
-		<div class="newformtitle">
+		<div className="newformtitle">
 			New Form
 		</div>
 		<form onSubmit = {this.handleSubmit}>

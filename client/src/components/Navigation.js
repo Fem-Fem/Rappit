@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Signup from './signup/SignupPage';
 import Login from './login/LoginPage'
 import PostsContainer from '../containers/PostsContainer';

@@ -1,6 +1,6 @@
 import React from 'react'
 import commentsContainer from '../../containers/commentsContainer';
-import { BrowserRouter as Router, Route, Switch, NavLink, Redirect, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import '../../post.css'
 
 const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
@@ -9,6 +9,7 @@ const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 		<Router>
 			<Switch>
 				<div id="post">
+					<button onClick={() =>fetchPost(id)}>{title} - {content}</button>
 					<Link to={`/${id}`} onClick={() => fetchPost(id)}>{title}</Link> - {content}
 					<Route path={`/${id}`} component={commentsContainer}/>
 				</div>
