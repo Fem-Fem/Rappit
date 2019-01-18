@@ -6,6 +6,7 @@ import { Link} from "react-router-dom";
 import { fetchPosts, createPost, deletePost, fetchPost } from '../actions/postActions'
 import PostForm from '../components/posts/PostForm'
 import Post from '../components/posts/Post'
+import Footer from '../components/Footer'
 
 class PostsContainer extends Component {
 	componentWillMount() {
@@ -20,7 +21,7 @@ class PostsContainer extends Component {
 				<PostForm/>
 				{posts.map(post => <Post key ={ post.id } post={post}
 				fetchPost={this.props.fetchPost} deletePost={this.props.deletePost}/>)}
-				<Link to='/logout'>Logout</Link>
+				<Footer/>
 			</div>
 		)
 	}
@@ -28,7 +29,7 @@ class PostsContainer extends Component {
 
 const mapStateToProps = state => {
 	return {
-		user: state.user.logged_in,
+		user: state.user,
 		posts: state.posts.posts
 	}
 }

@@ -34,7 +34,7 @@ class CommentsContainer extends Component {
 
 const mapStateToProps = state => {
 	return {
-		user: state.user.logged_in,
+		user: state.user,
 		posts: state.posts.posts,
 		current_post: state.posts.current_post,
 		current_post_comments: state.posts.current_post_comments
