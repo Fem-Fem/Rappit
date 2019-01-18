@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.3.1",
+    "react-router-relative-links": "^0.1.0",
     "redux-thunk": "^2.3.0"
   }
 }

@@ -14,22 +14,12 @@ import '../comment.css'
 class commentsContainer extends Component {
 
 	componentWillMount() {
-		// let x = 'http://localhost:3000'
-		// x.reload()
-		// $("div#comments_container").show()
-
-		// debugger
-	}
-
-
-	componentWillUnmount() {
-		$("div.comments_container").hide()
 	}
 
 	render() {
 		const { current_post, current_post_comments } = this.props
 		return(
-			<div class="comments_container">
+			<div id="comments_container">
 				<div id="comment_form">
 					<CommentForm post={this.props.current_post}/>
 				</div>
