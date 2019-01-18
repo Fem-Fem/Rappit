@@ -38,7 +38,6 @@ class PostsController < ActionController::Base
   end
 
   def destroy
-    binding.pry
     @post = Post.find(params[:id])
     if @post.user_id == params[:user_id]
       @post.destroy

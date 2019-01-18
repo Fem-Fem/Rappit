@@ -24,7 +24,6 @@ export default function postsReducer(state = {
 			}
 
 		case 'DELETE_POST':
-			debugger
 			const posts = state.posts.filter(post => post.id !== action.id);
 			return {...state, posts}
 

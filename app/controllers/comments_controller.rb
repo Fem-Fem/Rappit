@@ -45,7 +45,6 @@ class CommentsController < ActionController::Base
   end
 
   def destroy
-    binding.pry
     @comment = Comment.find(params[:id])
     if @comment.user_id == params[:userId]
       @comment.destroy

@@ -52,8 +52,6 @@ export const deleteComment = (id, postId, userId) => {
 		},
 		body: JSON.stringify({postId, id, userId})
 	}
-
-	debugger
 	
 	return dispatch => {
 		fetch(`${baseUrl}/${postId}/comments/${id}`, data)
