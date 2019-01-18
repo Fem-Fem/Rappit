@@ -25,7 +25,7 @@ class CommentsContainer extends Component {
 				</div>
 				{current_post_comments.map(comment => <Comment key ={ comment.id } comment={comment} 
 				postId={current_post.id} 
-				userId={comment.user.id} 
+				userId={comment.user_id} 
 				deleteComment={this.props.deleteComment}/>)}
 			</div>
 		)
