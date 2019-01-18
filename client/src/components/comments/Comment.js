@@ -3,7 +3,7 @@ import '../../comment.css'
 
 const Comment = ({comment: {id, content}, userId, postId, title, deleteComment, updateComment}) =>
 	<div>
-		<div id="comment">
+		<div id="comment" className={id}>
 			-{content}
 			<button onClick={() => deleteComment(id, postId, userId)}>Delete</button>
 			</div>

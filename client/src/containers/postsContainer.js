@@ -18,7 +18,7 @@ class PostsContainer extends Component {
 		return(
 			<div className="center">
 				<PostForm/>
-				{posts.map(post => <Post key ={ post.id } id= {post.id} post={post}
+				{posts.map(post => <Post key ={ post.id } post={post}
 				fetchPost={this.props.fetchPost} deletePost={this.props.deletePost}/>)}
 				<Link to='/logout'>Logout</Link>
 			</div>
