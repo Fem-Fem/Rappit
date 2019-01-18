@@ -3,14 +3,15 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { createComment, deleteComment } from '../actions/commentActions'
+import { fetchPosts} from '../actions/postActions'
+
 import CommentForm from '../components/comments/CommentForm'
 import Comment from '../components/comments/Comment'
 
-import { fetchPosts} from '../actions/postActions'
 import '../comment.css'
 
 
-class commentsContainer extends Component {
+class CommentsContainer extends Component {
 
 	componentWillMount() {
 	}
@@ -47,4 +48,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	fetchPosts
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(commentsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer)
