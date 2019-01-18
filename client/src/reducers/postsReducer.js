@@ -35,8 +35,8 @@ export default function postsReducer(state = {
 
 
 		case 'DELETE_COMMENT':
-			const comments = state.comments.filter(comment => comment.id !== action.payload.id);
-			return {...state, comments}
+			const comments = state.current_post_comments.filter(comment => comment.id !== action.payload.id);
+			return {...state, current_post_comments: comments}
 
 		default:
 			return state;
