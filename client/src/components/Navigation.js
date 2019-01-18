@@ -9,14 +9,12 @@ const Navigation = () => {
 	return(
 		<Router>
 			<Switch>
-			<div>
 				<Route exact path='/' render={ () => loggedIn() ? <Redirect to="/posts"/> : <Redirect to="/login"/>}/>
 				<Route path='/login' render={ () => loggedIn() ? <Redirect to="/"/> : <Login/>}/>
 				<Route path='/signup' render={ () => loggedIn() ? <Redirect to="/"/> : <Signup/>}/>
 				<Route path='/posts' render={ () => loggedIn() ? <PostsContainer/> : <Redirect to="/"/> }/>
 				<Route path='/logout' render={ () => logout()}/>
 				<Route path='/posts/:id' render={ () => loggedIn() ? <CommentsContainer/> : <Redirect to="/"/>}/>
-			</div>
 			</Switch>
 		</Router>
 	)
