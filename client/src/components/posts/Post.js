@@ -1,5 +1,4 @@
 import React from 'react'
-import commentsContainer from '../../containers/commentsContainer';
 import { Link} from "react-router-dom";
 import '../../post.css'
 
