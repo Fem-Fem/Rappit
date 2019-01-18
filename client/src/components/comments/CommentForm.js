@@ -40,7 +40,7 @@ handleSubmit = event => {
 		return (
 			<form onSubmit = {this.handleSubmit}>
 				<FormGroup>
-					<ControlLabel></ControlLabel>
+					<ControlLabel>Comment </ControlLabel>
 					<FormControl
 					name="content"
 					type="text"

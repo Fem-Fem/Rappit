@@ -26,6 +26,7 @@ const loggedIn = () => !!sessionStorage['logged_in'] && !(sessionStorage['logged
 
 const logout = () => {
 	if(sessionStorage['logged_in']) sessionStorage.removeItem('logged_in')
+	
 
 	return <Redirect to="/login"/>
 }
