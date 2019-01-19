@@ -27,7 +27,6 @@ class CommentsController < ActionController::Base
   def update
     @comment = Comment.find(params[:id])
     if @comment.update!(comment_params)
-      #redirect to comment.post
     else
       @errors = @comment.errors
       erb :'/edit'

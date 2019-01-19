@@ -6,7 +6,6 @@ class PostsController < ActionController::Base
 
   def create
     @post = Post.new(post_params)
-    binding.pry
     if @post.save
     	render json: @post
     else
