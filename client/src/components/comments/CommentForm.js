@@ -50,7 +50,7 @@ handleSubmit = event => {
 					/>
 				</FormGroup>
 
-				<Button type="submit">Upload Comment</Button>
+				<Button type="submit" id="upload_button">Upload Comment</Button>
 			</form>
 			)
 		}

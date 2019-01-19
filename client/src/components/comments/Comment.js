@@ -5,7 +5,7 @@ const Comment = ({comment: {id, content}, userId, postId, title, deleteComment, 
 	<div>
 		<div id="comment" className={id}>
 			-{content}
-			<button onClick={() => deleteComment(id, postId, userId)}>Delete</button>
+			<button id="delete_button" onClick={() => deleteComment(id, postId, userId)}>Delete</button>
 			</div>
 	</div>
 

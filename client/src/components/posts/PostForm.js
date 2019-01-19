@@ -69,7 +69,7 @@ render(){
 				onChange={this.handleContentChange}
 				/>
 			</FormGroup>
-			<Button type="submit">Upload Post</Button>
+			<Button type="submit" id="upload_button">Upload Post</Button>
 		</form>
 		</div>
 		)

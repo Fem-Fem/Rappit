@@ -8,9 +8,34 @@
 }
 
 #comments_container {
-	z-index: 1;
-	padding: 20px;
-	left: 0;
-	top: 0;
-	border: 1px solid black;
+	position: fixed;
+	right: 0px;
+	height: 23px;
+	top: 150px;
+	float: top;
+	width: 30%;
+}
+
+#delete_button {
+	background-color: red;
+	border-radius: 12px;
+	border: red;
+}
+
+#delete_button:hover {
+	background-color: black;
+	border-radius: 12px;
+	border: red;
+}
+
+#upload_button {
+	background-color: lightgreen;
+	border-radius: 12px;
+	border: green;
+}
+
+#upload_button:hover {
+	background-color: blue;
+	border-radius: 12px;
+	border: blue;
 }

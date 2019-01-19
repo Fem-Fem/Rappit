@@ -6,7 +6,7 @@ import '../../login.css'
 class LoginPage extends React.Component {
 	render() {
 		return (
-			<div class="center">
+			<div id="center_login_signup">
 				<div id="loginform">
 					<LoginForm />
 				</div>
