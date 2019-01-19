@@ -11,7 +11,7 @@ class PostsController < ActionController::Base
     	render json: @post
     else
        render json: {error: 'Does not exist!'}
-      # render json {message: @post.errors}, status: 301
+      # render json {message: @post.errors}, status:301
     end
   end
 
