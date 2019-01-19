@@ -36,9 +36,9 @@ handleSubmit = event => {
 
 	console.log(this.state);
 	this.props.createPost(this.state)
-	this.setState({
-		title: "",
-		content: ""})
+	// this.setState({
+	// 	title: "",
+	// 	content: ""})
 }
 
 render(){

@@ -32,7 +32,7 @@ handleSubmit = event => {
 	console.log(this.state);
 	const postId = this.props.post.id
 	this.props.createComment(this.state, postId)
-	this.setState({content: ""})
+	// this.setState({content: ""})
 }
 
 

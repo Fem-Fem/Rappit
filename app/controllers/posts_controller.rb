@@ -6,6 +6,7 @@ class PostsController < ActionController::Base
 
   def create
     @post = Post.new(post_params)
+    binding.pry
     if @post.save
     	render json: @post
     else
@@ -38,7 +39,6 @@ class PostsController < ActionController::Base
   end
 
   def destroy
-    binding.pry
     @post = Post.find(params[:id])
     if @post.user_id == params[:user_id]
       @post.destroy
