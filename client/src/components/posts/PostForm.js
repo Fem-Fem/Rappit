@@ -45,7 +45,7 @@ render(){
 	return (
 		<div>
 		<div className="newformtitle">
-			New Form
+			Upload a New Post!
 		</div>
 		<form onSubmit = {this.handleSubmit}>
 			<FormGroup>
