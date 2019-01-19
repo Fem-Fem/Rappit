@@ -7,6 +7,7 @@ class LoginPage extends React.Component {
 	render() {
 		return (
 			<div id="center_login_signup">
+				Have an Account? Log in to Rappit!
 				<div id="loginform">
 					<LoginForm />
 				</div>
