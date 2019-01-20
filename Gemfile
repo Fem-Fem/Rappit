@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
 gem 'tux'
+gem 'foreman', '~> 0.82.0'
+gem 'thor', '~> 0.19.1'
 gem 'pry'
 gem 'active_model_serializers'
 gem 'bcrypt'
