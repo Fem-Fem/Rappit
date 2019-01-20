@@ -6,8 +6,6 @@ import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 import { createPost } from '../../actions/postActions'
 import '../../post.css'
 
-
-
 class PostForm extends Component {
 
 	constructor() {

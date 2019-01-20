@@ -15,8 +15,6 @@ class CommentForm extends Component {
 			content: '',
 		};
 
-		this.handleChange = this.handleChange.bind(this)
-		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 handleChange = event => {
@@ -32,7 +30,6 @@ handleSubmit = event => {
 	console.log(this.state);
 	const postId = this.props.post.id
 	this.props.createComment(this.state, postId)
-	// this.setState({content: ""})
 }
 
 
