@@ -1,23 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 femi = User.create(username: "femi", password: "password")
 clara = User.create(username: "clara", password: "password")
 aj = User.create(username: "aj", password: "password")
 funmi = User.create(username: "funmi", password: "password")
 
-# shouldn't be able to give more than one upvote
-# i guess i can create an array that stores the ones that someone has commented on?
-# if u upvote you shouldn't be able to downvote
-
-post1 = Post.create(title: "Kanye", content: "is so cool", user_id: 1)
+post1 = Post.create(title: "Jay-Z", content: "Has now received 5 awards!", user_id: 1)
 post2 = Post.create(title: "Grafitti", content: "Has a rich history", user_id: 2)
-
+post3 = Post.create(title: "Rap", content: "Any tips to improve my skills?", user_id: 2)
+post3 = Post.create(title: "Hip-Hop", content: "I am a dance teacher! AMA", user_id: 3)
 
 comment1 = Comment.create(content: "I concur!", post_id: 1, user_id: 3)
 comment2 = Comment.create(content: "IDK, I really like Kendrick Lamar", post_id: 1, user_id: 2)
-comment3 = Comment.create(content: "Just like the romans!", post_id: 2, user_id: 4)
+comment3 = Comment.create(content: "My boyfriend made a mural of me in NYC!", post_id: 2, user_id: 4)
+comment4 = Comment.create(content: "Do you want to join my cypher?", post_id: 3, user_id: 4)
+comment5 = Comment.create(content: "I hate cyphers, too many people!", post_id: 3, user_id: 1)
+comment6 = Comment.create(content: "When did you start teaching?", post_id: 4, user_id: 2)
