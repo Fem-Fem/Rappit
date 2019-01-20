@@ -10,11 +10,11 @@ const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 				<Link to={`/posts/${id}`} onClick={() => fetchPost(id)}>
 					<button id="open_comments">{title} : {content}</button>
 				</Link>
+				<button id="delete_button" 
+					onClick={() => deletePost(id, parseInt(sessionStorage["logged_in"]))}>
+					Delete
+				</button>
 			</div>
-			<button id="delete_button" 
-			onClick={() => deletePost(id, parseInt(sessionStorage["logged_in"]))}>
-				Delete Post
-			</button>
 		</div>
 	)
 }
