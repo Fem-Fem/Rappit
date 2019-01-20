@@ -9,3 +9,7 @@
 	text-align: center;
 	align-items: center;
 }
+
+#login_signup {
+	cursor: pointer;
+}

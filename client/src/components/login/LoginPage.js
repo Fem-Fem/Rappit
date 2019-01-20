@@ -12,7 +12,7 @@ class LoginPage extends React.Component {
 					<LoginForm />
 				</div>
 				<div>
-					<Link to='/signup'>Signup</Link>
+					<Link to='/signup'>Sign Up if you don't have an account!</Link>
 				</div>
 			</div>
 		)

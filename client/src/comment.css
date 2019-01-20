@@ -20,22 +20,26 @@
 	background-color: red;
 	border-radius: 12px;
 	border: red;
+	cursor: pointer;
 }
 
 #delete_button:hover {
 	background-color: black;
 	border-radius: 12px;
 	border: red;
+	cursor: pointer;
 }
 
 #upload_button {
 	background-color: lightgreen;
 	border-radius: 12px;
 	border: green;
+	cursor: pointer;
 }
 
 #upload_button:hover {
 	background-color: blue;
 	border-radius: 12px;
 	border: blue;
+	cursor: pointer;
 }

@@ -69,7 +69,7 @@ render() {
 				onChange={this.handlePasswordChange}
 				/>
 			</FormGroup>
-			<Button type="submit">Login</Button>
+			<Button type="submit" id="login_signup">Login</Button>
 		</form>
 		)
 	}
