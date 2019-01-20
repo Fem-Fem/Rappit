@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link} from "react-router-dom";
+
 import '../../post.css'
 
 const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {

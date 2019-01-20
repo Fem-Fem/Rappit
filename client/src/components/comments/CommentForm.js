@@ -9,6 +9,7 @@ class CommentForm extends Component {
 
 	constructor() {
 		super();
+
 		this.state = {
 			post_id: '',
 			user_id: sessionStorage['logged_in'],
@@ -31,7 +32,6 @@ handleSubmit = event => {
 	const postId = this.props.post.id
 	this.props.createComment(this.state, postId)
 }
-
 
 	render() {
 		return (

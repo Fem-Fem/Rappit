@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Link} from "react-router-dom";
+import { bindActionCreators } from 'redux';
+import { Link } from "react-router-dom";
 
 import { fetchPosts, createPost, deletePost, fetchPost } from '../actions/postActions'
+
 import PostForm from '../components/posts/PostForm'
 import Post from '../components/posts/Post'
 import Footer from '../components/Footer'
