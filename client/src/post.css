@@ -50,3 +50,7 @@
 	font-size: 100%;
 	cursor: pointer;
 }
+
+#open_comments:hover {
+	background-color: darkgrey;
+}
