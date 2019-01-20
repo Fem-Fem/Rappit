@@ -10,7 +10,6 @@ import Comment from '../components/comments/Comment'
 
 import '../comment.css'
 
-
 class CommentsContainer extends Component {
 
 	componentWillMount() {
@@ -40,7 +39,6 @@ const mapStateToProps = state => {
 		current_post_comments: state.posts.current_post_comments
 	}
 }
-
 
 const mapDispatchToProps = dispatch => bindActionCreators({
 	createComment,

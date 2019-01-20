@@ -14,7 +14,6 @@ class PostsContainer extends Component {
 	}
 
 	render() {
-
 		const { posts } = this.props
 		return(
 			<div className="center">
