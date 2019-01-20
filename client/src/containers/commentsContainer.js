@@ -16,13 +16,15 @@ class CommentsContainer extends Component {
 	}
 
 	render() {
-		const { current_post, current_post_comments } = this.props
+		const { current_post } = this.props
+		debugger
 		return(
 			<div id="comments_container">
 				<div id="comment_form">
 					<CommentForm post={this.props.current_post}/>
 				</div>
-				{current_post_comments.map(comment => <Comment key ={ comment.id } comment={comment} 
+				{console.log(current_post[0])}
+				{current_post[0].map(comment => <Comment key ={ comment.id } comment={comment} 
 				postId={current_post.id} 
 				userId={comment.user_id} 
 				deleteComment={this.props.deleteComment}/>)}
@@ -36,7 +38,6 @@ const mapStateToProps = state => {
 		user: state.user,
 		posts: state.posts.posts,
 		current_post: state.posts.current_post,
-		current_post_comments: state.posts.current_post_comments
 	}
 }
 
