@@ -8,7 +8,7 @@ This app tracks everyone' ideas about hip hop culture! Add, read, and delete you
 
 Get repo
 Clone to your local environment
-Run by typing in 'rails s -p 3001', then navigating to src folder and typing 'npm start'!
+Run by typing in 'rake start'!
 
 ## Usage
  After using npm start, the app should be easily navigatable! First log in/signup, then navigate around to view posts and comments! You can read comments all on one page, so if you have ideas/connections you want to make between threads, go ahead! We provide validations on the back end to ensure that everyone has a safe username/password combo, as well as the only functionality to delete their own work!
