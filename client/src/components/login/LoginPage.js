@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter, Link} from "react-router-dom";
 
-import LoginForm from "./LoginForm";
+import LoginForm from "../../containers/loginForm";
 import '../../login.css'
 
 class LoginPage extends React.Component {

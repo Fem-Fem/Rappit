@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
-import { loginUser } from '../../actions/userActions'
+import { loginUser } from '../actions/userActions'
 
 
 class LoginForm extends Component {

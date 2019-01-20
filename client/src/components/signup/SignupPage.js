@@ -1,7 +1,7 @@
 import React from "react";
-import SignupForm from "./SignupForm";
 import { Link} from "react-router-dom";
 
+import SignupForm from "../../containers/signupForm";
 import '../../login.css'
 
 class SignupPage extends React.Component {
