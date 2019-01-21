@@ -14,13 +14,17 @@ export const loginUser = (user, callback) => {
 		fetch(`${baseUrl}/login`, data)
 		.then(response => response.json())
 		.then(user => {
-			sessionStorage.setItem('logged_in', user.id)
-			dispatch({
-			type: 'STORE_USER',
-			payload: user
-		})
-
+			if (user.id) {
+				sessionStorage.setItem('logged_in', user.id)
+				dispatch({
+				type: 'STORE_USER',
+				payload: user
+			})
 			callback()
+		} else {
+			const error = user.errors.error
+			alert(`${error}`)
+		}
 		})
 		.catch(err => err)
 	}
@@ -40,13 +44,17 @@ export const signupUser = (user, callback) => {
 		fetch(`${baseUrl}/signup`, data)
 		.then(response => response.json())
 		.then(user => {
-			sessionStorage.setItem('logged_in', user.id)
-			dispatch({
-			type: 'STORE_USER',
-			payload: user
-		})
-
+			if (user.id) {
+				sessionStorage.setItem('logged_in', user.id)
+				dispatch({
+				type: 'STORE_USER',
+				payload: user	
+			})
 			callback()
+		} else {
+			const error = user.errors
+			alert(`${error}`)
+		}
 		})
 		.catch(err => err)
 	}

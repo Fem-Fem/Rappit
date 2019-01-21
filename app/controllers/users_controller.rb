@@ -10,7 +10,7 @@ class UsersController < ActionController::Base
       @user.save
       render json: @user
     else
-      render json: {error: 'Invalid Option Given!'}
+      render json: {errors: @user.errors.full_messages.to_sentence}
     end
   end
 
@@ -20,7 +20,8 @@ class UsersController < ActionController::Base
       session[:username] = params[:username]
       render json: @user
     else
-      render json: {error: 'Invalid Option Given!'}
+      @user.errors.messages['error'] = "Incorrect username and/or password!"
+      render json: {errors: @user.errors.messages}
     end
   end
 
