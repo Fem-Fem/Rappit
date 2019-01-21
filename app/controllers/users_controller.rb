@@ -16,7 +16,11 @@ class UsersController < ActionController::Base
 
   def login
     @user = User.find_by(username: params[:user][:username])
-    if @user && @user.authenticate(params[:user][:password])
+    if @user == nil
+      @user = User.create(username: "", password: "")
+      @user.errors.messages['error'] = "Incorrect username and/or password!"
+      render json: {errors: @user.errors.messages}
+    elsif @user && @user.authenticate(params[:user][:password])
       session[:username] = params[:username]
       render json: @user
     else
