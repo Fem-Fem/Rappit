@@ -9,6 +9,7 @@ import Post from '../components/posts/Post'
 import Footer from '../components/Footer'
 
 class PostsContainer extends Component {
+	
 	componentWillMount() {
 		this.props.fetchPosts()
 	}
