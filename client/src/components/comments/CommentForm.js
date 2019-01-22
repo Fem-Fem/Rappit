@@ -5,6 +5,8 @@ import {ControlLabel, FormGroup, FormControl, Button} from 'react-bootstrap';
 
 import { createComment } from '../../actions/commentActions'
 
+import '../../comment.css'
+
 class CommentForm extends Component {
 
 	constructor() {
@@ -35,6 +37,7 @@ handleSubmit = event => {
 
 	render() {
 		return (
+			<div id="comment_form">
 			<form onSubmit = {this.handleSubmit}>
 				<FormGroup>
 					<ControlLabel>Upload a New Comment! </ControlLabel>
@@ -49,6 +52,7 @@ handleSubmit = event => {
 
 				<Button type="submit" id="upload_button">Upload Comment</Button>
 			</form>
+			</div>
 			)
 		}
 	}

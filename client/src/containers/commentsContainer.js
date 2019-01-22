@@ -19,9 +19,8 @@ class CommentsContainer extends Component {
 		const { current_post, current_post_comments } = this.props
 		return(
 			<div id="comments_container">
-				<div id="comment_form">
-					<CommentForm post={current_post}/>
-				</div>
+				<CommentForm post={current_post}/>
+				
 				{current_post_comments.map(comment => <Comment key ={ comment.id } comment={comment} 
 				postId={current_post.id} 
 				userId={comment.user_id} 
