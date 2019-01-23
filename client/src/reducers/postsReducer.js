@@ -1,6 +1,6 @@
 export default function postsReducer(state = {
 	posts: [],
-	current_post: [],
+	current_post: {},
 	current_post_comments: []
 }, action) {
 
@@ -8,35 +8,60 @@ export default function postsReducer(state = {
 
 		case 'GET_POSTS':
 			return {
-				...state, posts: action.payload
+				...state, 
+				posts: action.payload
 			}
 
 		case 'GET_POST':
 			return {
-				...state, current_post: action.payload, current_post_comments: action.payload.comments
+				...state, 
+				current_post: action.payload, 
+				current_post_comments: action.payload.comments
 			}
 
 		case 'ADD_POST':
 			return {
 				...state,
-				posts: [...state.posts, action.payload],
+				posts: [
+					...state.posts, 
+					action.payload
+				],
 				current_post: action.payload
 			}
 
 		case 'ADD_COMMENT':
 			return {
 				...state,
-				current_post_comments: [...state.current_post_comments, action.payload]
+				current_post: {
+					...state.current_post,
+					comments: [
+					...state.current_post.comments, 
+					action.payload
+					]
+				},
+				current_post_comments: [
+					...state.current_post_comments, 
+					action.payload
+				]
 			}
 
 		case 'DELETE_POST':
 			const posts = state.posts.filter(post => post.id !== action.payload.id);
-			return {...state, posts}
-
+			return {
+				...state, 
+				posts
+			}
 
 		case 'DELETE_COMMENT':
 			const comments = state.current_post_comments.filter(comment => comment.id !== action.payload.id);
-			return {...state, current_post_comments: comments}
+			return {
+				...state,
+				current_post: {
+					...state.current_post,
+					comments: [comments]
+				},
+				current_post_comments: comments
+			}
 
 		default:
 			return state;
