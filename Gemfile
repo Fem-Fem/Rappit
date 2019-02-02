@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.4.0'
 gem 'tux'
 gem 'foreman', '~> 0.82.0'
 gem 'thor', '~> 0.19.1'
