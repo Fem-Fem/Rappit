@@ -52,10 +52,11 @@ export const createPost = post => {
 	return dispatch => {
 		fetch(`${baseUrl}/posts`, data)
 		.then(response => response.json())
-		.then(post => dispatch({
-			type: 'ADD_POST',
-			payload: post
-		}))
+		.then(post => {
+			dispatch({
+					type: 'ADD_POST',
+					payload: post
+				})})
 		.catch(err => err)
 	}
 }

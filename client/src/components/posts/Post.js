@@ -2,6 +2,7 @@ import React from 'react'
 import { Link} from "react-router-dom";
 
 import '../../post.css'
+import Like from '../like/like.js'
 
 const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 	return (
@@ -14,6 +15,7 @@ const Post = ({post: {id, title, content, user_id}, deletePost, fetchPost}) => {
 					onClick={() => deletePost(id, parseInt(sessionStorage["logged_in"]))}>
 					Delete
 				</button>
+				< Like />
 			</div>
 		</div>
 	)
