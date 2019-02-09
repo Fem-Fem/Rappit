@@ -7,7 +7,7 @@ const Footer = () => {
 		<div>
 			<div id="footer">
 				<Link to='/logout'>
-					<button id="logout">Logout!</button>
+					<button id="logout">Logout! (Come back soon)</button>
 				</Link>
 			</div>
 		</div>
