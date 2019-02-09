@@ -18,6 +18,7 @@ class SignupForm extends Component {
 
 }
 
+
 handleUsernameChange = event => {
 	this.setState({
 		username: event.target.value

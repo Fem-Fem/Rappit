@@ -14,9 +14,6 @@ class Like extends Component {
 		this.setState({
 			counter: this.state.counter + 1
 		})
-		this.state = {
-			counter...
-		}
 	}
 
 render() {
@@ -27,7 +24,7 @@ render() {
 		</button>
 		</div>
 	)
-}
+	}
 }
 
 
