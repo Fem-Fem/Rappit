@@ -2,7 +2,9 @@
 
 ## Description
 
-This app tracks everyone' ideas about hip hop culture! Add, read, and delete your comments and posts! Peruse other people's posts and comments to learn more!
+This app tracks everyone' ideas about hip hop culture! It functions as a reddit clone. After logging in/signing up, you can access the site and view posts/comments or create and delete your own. It stores everyone's posts and comments on the backend in API format with Ruby on Rails, and the front end was built with React.
+
+Click this link for a walkthrough! https://drive.google.com/open?id=1L_1Yct-Y0VzC6IgzyZTL7wJd7hmbypiN
 
 ## Install Instructions
 
